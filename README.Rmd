@@ -1,0 +1,35 @@
+laselva
+=======
+
+```{r echo=FALSE}
+knitr::opts_chunk$set(
+  warning = FALSE,
+  message = FALSE,
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+[![Build Status](https://travis-ci.org/ropenscilabs/laselva.svg?branch=master)](https://travis-ci.org/ropenscilabs/laselva)
+
+## Install
+
+```{r eval=FALSE}
+devtools::install_github("ropenscilabs/laselva")
+```
+
+```{r}
+library("laselva")
+```
+
+## list data
+
+```{r}
+fia_datasets()
+```
+
+## get data
+
+```{r}
+fia_fetch(state = "MP")
+```
