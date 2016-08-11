@@ -8,7 +8,7 @@ handle_errors <- function(x, path) {
 fia_cache_GET <- function(url, overwrite, ...) {
   fpath <- file.path(fia_cache_path(), basename(url))
   if (file.exists(fpath)) {
-    message("File in cache")
+    message(basename(url), " - found in cache")
     return(fpath)
   } else {
     temp_path <- tempfile()

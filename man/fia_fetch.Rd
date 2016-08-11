@@ -2,14 +2,15 @@
 % Please edit documentation in R/fia_fetch.R
 \name{fia_fetch}
 \alias{fia_fetch}
-\title{list datasets}
+\title{fetch datasets}
 \usage{
 fia_fetch(state, what = "tree", overwrite = FALSE, ...)
 }
 \arguments{
-\item{state}{(character) a state, two letter code}
+\item{state}{(character) one or more states (2 letter code), or the special
+"all", for all states}
 
-\item{what}{(character) what data to get, default: tree}
+\item{what}{(character) what data to get, one or more values, default: tree}
 
 \item{overwrite}{(logical) Will only overwrite existing path if \code{TRUE}.
 default: \code{FALSE}}
@@ -20,11 +21,40 @@ default: \code{FALSE}}
 a tibble (a data.frame)
 }
 \description{
-list datasets
+fetch datasets
 }
 \examples{
 \dontrun{
+# Northern Mariana Islands - trees
 fia_fetch(state = "MP")
+# Guam - trees
+fia_fetch(state = "GU")
+# Guam - seedling
+fia_fetch(state = "GU", what = "seedling")
+# Alaska - plot
+ak_plot <- fia_fetch(state = "AK", what = "plot")
+# Arizona - vegetiation subplot - no data, empty data.frame
+fia_fetch(state = "AZ", what = "veg_subplot")
+
+# multiple states
+x <- fia_fetch(state = c('mp', 'gu'))
+x$mp_tree
+x$gu_tree
+
+# multiple datasets
+y <- fia_fetch('as', what = c('seedling', 'plot'))
+y$as_seedling
+y$as_plot
+
+# multiple states and multiple datasets
+z <- fia_fetch(state = c('mp', 'gu'), what = c('seedling', 'plot'))
+z$mp_seedling
+z$mp_plot
+z$gu_seedling
+z$gu_plot
+
+# all states, be careful, lots of data
+## fia_fetch("all", "subplot_regen")
 }
 }
 

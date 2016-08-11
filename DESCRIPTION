@@ -2,7 +2,7 @@ Package: laselva
 Type: Package
 Title: FIA
 Description: FIA data.
-Version: 0.0.2.9100
+Version: 0.0.2.9500
 Date: 2016-08-10
 Authors@R: c(person("Scott", "Chamberlain", role = c("aut", "cre"),
     email = "myrmecocystus@gmail.com"))
