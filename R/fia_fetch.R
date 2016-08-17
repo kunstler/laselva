@@ -40,12 +40,17 @@
 #' # all states, be careful, lots of data
 #' ## fia_fetch("all", "subplot_regen")
 #' }
+
 fia_fetch <- function(state, what = "tree", overwrite = FALSE, ...) {
   stopifnot(inherits(what, "character"))
   stopifnot(length(what) >= 1)
-  urls <- unlist(lapply(state, function(x) {
-    file.path(fia_base(), "CSV", paste0(x, "_", what, ".zip"))
-  }))
+  if(state=='all'){
+    urls <- file.path(fia_base(), "CSV", paste0(what, ".zip"))
+  }else{
+    urls <- unlist(lapply(state, function(x) {
+      file.path(fia_base(), "CSV", paste0(x, "_", what, ".zip"))
+    }))
+  }
   nms <- gsub("\\.zip", "", basename(urls))
   setNames(lapply(urls, function(z) {
     xx <- fia_cache_GET(z, overwrite, ...)
