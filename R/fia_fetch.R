@@ -44,15 +44,15 @@
 fia_fetch <- function(state, what = "tree", overwrite = FALSE, ...) {
   stopifnot(inherits(what, "character"))
   stopifnot(length(what) >= 1)
-  if(state=='all'){
+  if (state == 'all') {
     urls <- file.path(fia_base(), "CSV", paste0(what, ".zip"))
-  }else{
+  } else {
     urls <- unlist(lapply(state, function(x) {
       file.path(fia_base(), "CSV", paste0(x, "_", what, ".zip"))
     }))
   }
   nms <- gsub("\\.zip", "", basename(urls))
-  setNames(lapply(urls, function(z) {
+  stats::setNames(lapply(urls, function(z) {
     xx <- fia_cache_GET(z, overwrite, ...)
     suppressMessages(readr::read_csv(un_zip(xx)))
   }), nms)

@@ -7,7 +7,8 @@ cuf8 <- function(x) httr::content(x, "text", encoding = 'UTF-8')
 
 tc <- function(x) Filter(Negate(is.null), x)
 
-fia_base <- function() "http://apps.fs.fed.us/fiadb-downloads"
+fia_base <- function() "https://apps.fs.usda.gov/fia/datamart"
+# "https://apps.fs.fed.us/fiadb-downloads"
 
 # http://apps.fs.fed.us/fiadb-downloads/CSV/AL_BOUNDARY.csv
 # http://apps.fs.fed.us/fiadb-downloads/CSV/AL_BOUNDARY.zip
