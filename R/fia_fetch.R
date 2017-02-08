@@ -1,4 +1,4 @@
-#' fetch datasets
+#' Fetch US FIA datasets
 #'
 #' @export
 #' @param state (character) one or more states (2 letter code), or the special
@@ -10,38 +10,37 @@
 #' @return a tibble (a data.frame)
 #' @examples \dontrun{
 #' # Northern Mariana Islands - trees
-#' fia_fetch(state = "MP")
+#' fetch_usa(state = "MP")
 #' # Guam - trees
-#' fia_fetch(state = "GU")
+#' fetch_usa(state = "GU")
 #' # Guam - seedling
-#' fia_fetch(state = "GU", what = "seedling")
+#' fetch_usa(state = "GU", what = "seedling")
 #' # Alaska - plot
-#' ak_plot <- fia_fetch(state = "AK", what = "plot")
+#' ak_plot <- fetch_usa(state = "AK", what = "plot")
 #' # Arizona - vegetiation subplot - no data, empty data.frame
-#' fia_fetch(state = "AZ", what = "veg_subplot")
+#' fetch_usa(state = "AZ", what = "veg_subplot")
 #'
 #' # multiple states
-#' x <- fia_fetch(state = c('mp', 'gu'))
+#' x <- fetch_usa(state = c('mp', 'gu'))
 #' x$mp_tree
 #' x$gu_tree
 #'
 #' # multiple datasets
-#' y <- fia_fetch('as', what = c('seedling', 'plot'))
+#' y <- fetch_usa('as', what = c('seedling', 'plot'))
 #' y$as_seedling
 #' y$as_plot
 #'
 #' # multiple states and multiple datasets
-#' z <- fia_fetch(state = c('mp', 'gu'), what = c('seedling', 'plot'))
+#' z <- fetch_usa(state = c('mp', 'gu'), what = c('seedling', 'plot'))
 #' z$mp_seedling
 #' z$mp_plot
 #' z$gu_seedling
 #' z$gu_plot
 #'
 #' # all states, be careful, lots of data
-#' ## fia_fetch("all", "subplot_regen")
+#' ## fetch_usa("all", "subplot_regen")
 #' }
-
-fia_fetch <- function(state, what = "tree", overwrite = FALSE, ...) {
+fetch_usa <- function(state, what = "tree", overwrite = FALSE, ...) {
   stopifnot(inherits(what, "character"))
   stopifnot(length(what) >= 1)
   if (state == 'all') {

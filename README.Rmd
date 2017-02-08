@@ -25,13 +25,13 @@ library("laselva")
 ## list data
 
 ```{r}
-fia_datasets()
+list_datasets_usa()
 ```
 
 ## get data
 
 ```{r}
-fia_fetch(state = "MP")
+fetch_usa(state = "MP")
 ```
 
 ## Meta

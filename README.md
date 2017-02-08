@@ -21,7 +21,7 @@ library("laselva")
 
 
 ```r
-fia_datasets()
+list_datasets_usa()
 #> $ref_table
 #> # A tibble: 21 × 5
 #>                   `ZIP Files`                `CSV Files`
@@ -78,7 +78,7 @@ fia_datasets()
 
 
 ```r
-fia_fetch(state = "MP")
+fetch_usa(state = "MP")
 #> $MP_tree
 #> # A tibble: 2,208 × 158
 #>              CN      PLT_CN PREV_TRE_CN INVYR STATECD UNITCD COUNTYCD
@@ -130,4 +130,3 @@ fia_fetch(state = "MP")
 By participating in this project you agree to abide by its terms.
 
 [![ropensci_footer](https://ropensci.org/public_images/github_footer.png)](https://ropensci.org)
-
