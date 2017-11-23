@@ -2,22 +2,29 @@
 % Please edit documentation in R/fia_datasets.R
 \name{list_datasets_usa}
 \alias{list_datasets_usa}
-\title{List  US FIA datasets}
+\title{List USA Forest Inventory and Analysis (FIA) datasets}
 \usage{
 list_datasets_usa(...)
 }
 \arguments{
-\item{...}{curl options passed on to \code{\link[httr]{GET}}}
+\item{...}{curl options passed on to [crul::HttpClient]}
 }
 \value{
-a list of three data.frames (as tibble's)
+a list of three data.frames (as tibble's), one for
+reference metadata files, datasets by state and datasets
+with all states combined
 }
 \description{
-List  US FIA datasets
+List USA Forest Inventory and Analysis (FIA) datasets
 }
 \examples{
 \dontrun{
-list_datasets_usa()
+x <- list_datasets_usa()
+x$ref_table
+x$by_state
+x$all_states
 }
 }
-
+\references{
+<https://apps.fs.usda.gov/fia/datamart/CSV/datamart_csv.html>
+}

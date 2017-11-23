@@ -1,12 +1,10 @@
-#' Fetch US FIA datasets
+#' Fetch USA Forest Inventory and Analysis (FIA) datasets
 #'
 #' @export
 #' @param state (character) one or more states (2 letter code), or the special
 #' "all", for all states
 #' @param what (character) what data to get, one or more values, default: tree
-#' @param overwrite (logical) Will only overwrite existing path if \code{TRUE}.
-#' default: \code{FALSE}
-#' @param ... curl options passed on to \code{\link[httr]{GET}}
+#' @param ... curl options passed on to [crul::HttpClient]
 #' @return a tibble (a data.frame)
 #' @examples \dontrun{
 #' # Northern Mariana Islands - trees
@@ -40,19 +38,19 @@
 #' # all states, be careful, lots of data
 #' ## fetch_usa("all", "subplot_regen")
 #' }
-fetch_usa <- function(state, what = "tree", overwrite = FALSE, ...) {
+fetch_usa <- function(state, what = "tree", ...) {
   stopifnot(inherits(what, "character"))
   stopifnot(length(what) >= 1)
   if (state == 'all') {
-    urls <- file.path(fia_base(), "CSV", paste0(what, ".zip"))
+    urls <- file.path(fia_base(), "fia/datamart/CSV", paste0(what, ".zip"))
   } else {
     urls <- unlist(lapply(state, function(x) {
-      file.path(fia_base(), "CSV", paste0(x, "_", what, ".zip"))
+      file.path(fia_base(), "fia/datamart/CSV", paste0(x, "_", what, ".zip"))
     }))
   }
   nms <- gsub("\\.zip", "", basename(urls))
   stats::setNames(lapply(urls, function(z) {
-    xx <- fia_cache_GET(z, overwrite, ...)
+    xx <- fia_cache_GET(z, ...)
     suppressMessages(readr::read_csv(un_zip(xx)))
   }), nms)
 }

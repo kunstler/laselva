@@ -1,13 +1,13 @@
-fia_GET <- function(x, ...) {
-  res <- httr::GET(x, ...)
-  httr::stop_for_status(res)
+fia_GET <- function(base, path, ...) {
+	conn <- crul::HttpClient$new(url = base, opts = list(...))
+  res <- conn$get(path)
+  res$raise_for_status()
+  return(res)
 }
-
-cuf8 <- function(x) httr::content(x, "text", encoding = 'UTF-8')
 
 tc <- function(x) Filter(Negate(is.null), x)
 
-fia_base <- function() "https://apps.fs.usda.gov/fia/datamart"
+fia_base <- function() "https://apps.fs.usda.gov"
 # "https://apps.fs.fed.us/fiadb-downloads"
 
 # http://apps.fs.fed.us/fiadb-downloads/CSV/AL_BOUNDARY.csv
@@ -19,5 +19,3 @@ un_zip <- function(x) {
   utils::unzip(x, exdir = exdir)
   return(list.files(exdir, pattern = ".csv", full.names = TRUE))
 }
-
-fia_cache_path <- function() rappdirs::user_cache_dir("fia-data")

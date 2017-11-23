@@ -2,9 +2,9 @@
 % Please edit documentation in R/fia_fetch.R
 \name{fetch_usa}
 \alias{fetch_usa}
-\title{Fetch US FIA datasets}
+\title{Fetch USA Forest Inventory and Analysis (FIA) datasets}
 \usage{
-fetch_usa(state, what = "tree", overwrite = FALSE, ...)
+fetch_usa(state, what = "tree", ...)
 }
 \arguments{
 \item{state}{(character) one or more states (2 letter code), or the special
@@ -12,16 +12,13 @@ fetch_usa(state, what = "tree", overwrite = FALSE, ...)
 
 \item{what}{(character) what data to get, one or more values, default: tree}
 
-\item{overwrite}{(logical) Will only overwrite existing path if \code{TRUE}.
-default: \code{FALSE}}
-
-\item{...}{curl options passed on to \code{\link[httr]{GET}}}
+\item{...}{curl options passed on to [crul::HttpClient]}
 }
 \value{
 a tibble (a data.frame)
 }
 \description{
-Fetch US FIA datasets
+Fetch USA Forest Inventory and Analysis (FIA) datasets
 }
 \examples{
 \dontrun{
@@ -57,4 +54,3 @@ z$gu_plot
 ## fetch_usa("all", "subplot_regen")
 }
 }
-

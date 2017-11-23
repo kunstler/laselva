@@ -2,11 +2,10 @@
 % Please edit documentation in R/laselva-package.R
 \docType{package}
 \name{laselva-package}
-\alias{laselva}
 \alias{laselva-package}
+\alias{laselva}
 \title{get FIA data}
 \description{
 get FIA data
 }
 \keyword{package}
-

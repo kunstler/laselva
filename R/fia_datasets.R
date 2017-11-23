@@ -1,14 +1,22 @@
-#' List US FIA datasets
+#' List USA Forest Inventory and Analysis (FIA) datasets
 #'
 #' @export
-#' @param ... curl options passed on to \code{\link[httr]{GET}}
-#' @return a list of three data.frames (as tibble's)
+#' @param ... curl options passed on to [crul::HttpClient]
+#' @return a list of three data.frames (as tibble's), one for
+#' reference metadata files, datasets by state and datasets
+#' with all states combined
+#' @references <https://apps.fs.usda.gov/fia/datamart/CSV/datamart_csv.html>
 #' @examples \dontrun{
-#' list_datasets_usa()
+#' x <- list_datasets_usa()
+#' x$ref_table
+#' x$by_state
+#' x$all_states
 #' }
 list_datasets_usa <- function(...) {
-  xx <- cuf8(fia_GET(file.path(fia_base(), "CSV/datamart_csv.html"), ...))
-  tabs <- rvest::html_table(xml2::read_html(xx), fill = TRUE, header = TRUE)[-1]
+  xx <- fia_GET(fia_base(), "fia/datamart/CSV/datamart_csv.html",
+  	...)$parse("UTF-8")
+  tabs <- rvest::html_table(xml2::read_html(xx), fill = TRUE,
+  	header = TRUE)[-1]
   tabs <- stats::setNames(tabs, c('ref_table', 'by_state', 'all_states'))
   lapply(tabs, tibble::as_data_frame)
 }
