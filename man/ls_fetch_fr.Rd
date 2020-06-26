@@ -75,3 +75,6 @@ ls_fetch_fr(year = 2007)
 ls_fetch_fr_revisit(year = 2007)
 }
 }
+\references{
+https://inventaire-forestier.ign.fr/
+}

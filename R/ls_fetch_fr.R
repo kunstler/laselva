@@ -9,6 +9,7 @@
 #' @details `ls_fetch_fr()` gets the given years data, while
 #' `ls_fetch_fr_revisit()` gets revisit data for 5 years after the supplied
 #' year
+#' @references https://inventaire-forestier.ign.fr/
 #' @return a list of tibbles
 #' 
 #' Documentation
