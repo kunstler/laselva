@@ -18,7 +18,8 @@ Imports:
     rvest,
     xml2,
     hoardr,
-    tibble
+    tibble,
+    zip
 Suggests:
     testthat
 RoxygenNote: 7.1.0

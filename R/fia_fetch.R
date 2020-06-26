@@ -8,37 +8,37 @@
 #' @return a tibble (a data.frame)
 #' @examples \dontrun{
 #' # Northern Mariana Islands - trees
-#' fetch_usa(state = "MP")
+#' ls_fetch_usa(state = "MP")
 #' # Guam - trees
-#' fetch_usa(state = "GU")
+#' ls_fetch_usa(state = "GU")
 #' # Guam - seedling
-#' fetch_usa(state = "GU", what = "seedling")
+#' ls_fetch_usa(state = "GU", what = "seedling")
 #' # Alaska - plot
-#' ak_plot <- fetch_usa(state = "AK", what = "plot")
+#' ak_plot <- ls_fetch_usa(state = "AK", what = "plot")
 #' # Arizona - vegetiation subplot - no data, empty data.frame
-#' fetch_usa(state = "AZ", what = "veg_subplot")
+#' ls_fetch_usa(state = "AZ", what = "veg_subplot")
 #'
 #' # multiple states
-#' x <- fetch_usa(state = c('mp', 'gu'))
+#' x <- ls_fetch_usa(state = c('mp', 'gu'))
 #' x$mp_tree
 #' x$gu_tree
 #'
 #' # multiple datasets
-#' y <- fetch_usa('as', what = c('seedling', 'plot'))
+#' y <- ls_fetch_usa('as', what = c('seedling', 'plot'))
 #' y$as_seedling
 #' y$as_plot
 #'
 #' # multiple states and multiple datasets
-#' z <- fetch_usa(state = c('mp', 'gu'), what = c('seedling', 'plot'))
+#' z <- ls_fetch_usa(state = c('mp', 'gu'), what = c('seedling', 'plot'))
 #' z$mp_seedling
 #' z$mp_plot
 #' z$gu_seedling
 #' z$gu_plot
 #'
 #' # all states, be careful, lots of data
-#' ## fetch_usa("all", "subplot_regen")
+#' ## ls_fetch_usa("all", "subplot_regen")
 #' }
-fetch_usa <- function(state, what = "tree", ...) {
+ls_fetch_usa <- function(state, what = "tree", ...) {
   stopifnot(inherits(what, "character"))
   stopifnot(length(what) >= 1)
   if (state == 'all') {
@@ -50,7 +50,7 @@ fetch_usa <- function(state, what = "tree", ...) {
   }
   nms <- gsub("\\.zip", "", basename(urls))
   stats::setNames(lapply(urls, function(z) {
-    xx <- fia_cache_GET(z, ...)
+    xx <- cache_GET(z, "usa-fia", ...)
     suppressMessages(readr::read_csv(un_zip(xx)))
   }), nms)
 }

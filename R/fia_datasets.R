@@ -8,13 +8,13 @@
 #' @references 
 #' https://apps.fs.usda.gov/fia/datamart/CSV/datamart_csv.html
 #' @examples \dontrun{
-#' x <- list_datasets_usa()
+#' x <- ls_list_usa()
 #' x
 #' x$ref_table
 #' x$by_state
 #' x$all_states
 #' }
-list_datasets_usa <- function(...) {
+ls_list_usa <- function(...) {
   xx <- fia_GET(fia_base(), "fia/datamart/CSV/datamart_csv.html",
   	...)$parse("UTF-8")
   tabs <- rvest::html_table(xml2::read_html(xx), fill = TRUE,

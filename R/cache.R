@@ -5,8 +5,8 @@ handle_errors <- function(x, path) {
   }
 }
 
-fia_cache_GET <- function(url, ...) {
-  fpath <- file.path(laselva_cache$cache_path_get(), basename(url))
+cache_GET <- function(url, path, ...) {
+  fpath <- file.path(laselva_cache$cache_path_get(), path, basename(url))
   if (file.exists(fpath)) {
     message(basename(url), " - found in cache")
     return(fpath)

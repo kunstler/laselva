@@ -16,6 +16,15 @@ fia_base <- function() "https://apps.fs.usda.gov"
 
 un_zip <- function(x) {
   exdir <- sub("\\.zip", "", x)
-  utils::unzip(x, exdir = exdir)
+  zip::unzip(x, exdir = exdir, junkpaths = TRUE)
   return(list.files(exdir, pattern = ".csv", full.names = TRUE))
+}
+
+assert <- function(x, y) {
+  if (!is.null(x)) {
+    if (!inherits(x, y)) {
+      stop(deparse(substitute(x)), " must be of class ",
+        paste0(y, collapse = ", "), call. = FALSE)
+    }
+  }
 }
