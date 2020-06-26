@@ -1,22 +1,24 @@
 Package: laselva
 Type: Package
-Title: Forest Inventory Data
+Title: Access to Global Forest Inventory Data
 Description: Fetch forest inventory data from across the globe.
-Version: 0.0.5.9100
+Version: 0.0.6.91
 Authors@R: c(person("Scott", "Chamberlain", role = c("aut", "cre"),
     email = "myrmecocystus@gmail.com"))
 License: MIT + file LICENSE
 URL: https://github.com/ropenscilabs/laselva (source)
   https://docs.ropensci.org/laselva/ (docs)
 BugReports: https://github.com/ropenscilabs/laselva/issues
-Roxygen: list(wrap = FALSE)
+Roxygen: list(markdown=TRUE)
+Encoding: UTF-8
+Language: en-US
 Imports:
-    crul (>= 0.4.0),
-    readr (>= 1.1.1),
+    crul,
+    readr,
     rvest,
     xml2,
     hoardr,
     tibble
 Suggests:
     testthat
-RoxygenNote: 6.0.1
+RoxygenNote: 7.1.0

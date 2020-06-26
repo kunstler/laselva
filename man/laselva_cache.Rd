@@ -18,13 +18,13 @@ files are being cached with \code{laselva_cache$cache_path_get()}
 \section{Functions}{
 
 \itemize{
- \item \code{laselva_cache$list()} returns a character vector of full path file
- names
- \item \code{laselva_cache$delete()} deletes one or more files, returns nothing
- \item \code{laselva_cache$delete_all()} delete all files, returns nothing
- \item \code{laselva_cache$details()} prints file name and file size for each
- file, supply with one or more files, or no files (and get details for
- all available)
+\item \code{laselva_cache$list()} returns a character vector of full path file
+names
+\item \code{laselva_cache$delete()} deletes one or more files, returns nothing
+\item \code{laselva_cache$delete_all()} delete all files, returns nothing
+\item \code{laselva_cache$details()} prints file name and file size for each
+file, supply with one or more files, or no files (and get details for
+all available)
 }
 }
 

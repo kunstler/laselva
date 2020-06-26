@@ -5,7 +5,4 @@
 \alias{laselva-package}
 \alias{laselva}
 \title{get FIA data}
-\description{
-get FIA data
-}
 \keyword{package}

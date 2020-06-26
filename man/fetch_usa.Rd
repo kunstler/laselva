@@ -12,7 +12,7 @@ fetch_usa(state, what = "tree", ...)
 
 \item{what}{(character) what data to get, one or more values, default: tree}
 
-\item{...}{curl options passed on to [crul::HttpClient]}
+\item{...}{curl options passed on to \link[crul:HttpClient]{crul::HttpClient}}
 }
 \value{
 a tibble (a data.frame)

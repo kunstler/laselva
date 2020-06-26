@@ -7,7 +7,7 @@
 list_datasets_usa(...)
 }
 \arguments{
-\item{...}{curl options passed on to [crul::HttpClient]}
+\item{...}{curl options passed on to \link[crul:HttpClient]{crul::HttpClient}}
 }
 \value{
 a list of three data.frames (as tibble's), one for
@@ -26,5 +26,5 @@ x$all_states
 }
 }
 \references{
-<https://apps.fs.usda.gov/fia/datamart/CSV/datamart_csv.html>
+\url{https://apps.fs.usda.gov/fia/datamart/CSV/datamart_csv.html}
 }
