@@ -3,7 +3,7 @@
 \name{ls_fetch_fr}
 \alias{ls_fetch_fr}
 \alias{ls_fetch_fr_revisit}
-\title{French IGN data}
+\title{French IGN NFI data}
 \usage{
 ls_fetch_fr(year, ...)
 

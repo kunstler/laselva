@@ -1,3 +1,6 @@
+# set cache path to a temp dir
+laselva_cache$cache_path_set(full_path = "../files")
+
 test_that("ls_fetch_fr", {
   vcr::use_cassette("ls_fetch_fr", {
     x <- ls_fetch_fr(year = 2017)

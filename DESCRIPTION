@@ -18,8 +18,7 @@ Imports:
     xml2,
     hoardr,
     tibble,
-    data.table,
-    zip
+    data.table
 Suggests:
     testthat,
     vcr

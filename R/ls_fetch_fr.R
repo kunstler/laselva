@@ -1,4 +1,4 @@
-#' French IGN data
+#' French IGN NFI data
 #' 
 #' Fetch French IGN Institut National de L'Information Geographique
 #' et Forestiere data

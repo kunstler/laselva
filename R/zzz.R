@@ -15,9 +15,14 @@ fia_base <- function() "https://apps.fs.usda.gov"
 # http://apps.fs.fed.us/fiadb-downloads/CSV/OR_TREE.zip
 
 un_zip <- function(x) {
+  z <- just_un_zip(x)
+  return(list.files(z, pattern = ".csv", full.names = TRUE))
+}
+
+just_un_zip <- function(x) {
   exdir <- sub("\\.zip", "", x)
-  zip::unzip(x, exdir = exdir, junkpaths = TRUE)
-  return(list.files(exdir, pattern = ".csv", full.names = TRUE))
+  utils::unzip(x, exdir = exdir, junkpaths = TRUE)
+  return(exdir)
 }
 
 assert <- function(x, y) {
@@ -32,3 +37,5 @@ assert <- function(x, y) {
 f_read <- function(x, sep = "auto") {
   tibble::as_tibble(data.table::fread(x, sep = sep, data.table = FALSE))
 }
+
+strct <- function(str, pattern) regmatches(str, regexpr(pattern, str))

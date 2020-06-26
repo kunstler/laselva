@@ -1,3 +1,6 @@
+# set cache path to a temp dir
+laselva_cache$cache_path_set(full_path = "../files")
+
 test_that("ls_list_usa", {
   vcr::use_cassette("ls_list_usa", {
     x <- ls_list_usa()
