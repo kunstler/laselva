@@ -1,5 +1,5 @@
-#' get FIA data
-#'
+#' @title laselva
+#' @description Access to global forest inventory data
 #' @importFrom crul HttpClient
 #' @importFrom rvest html_table
 #' @name laselva-package

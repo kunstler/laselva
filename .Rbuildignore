@@ -8,3 +8,5 @@ README.Rmd
 ^CONTRIBUTING\.md$
 ^codemeta\.json$
 ^Makefile$
+^.github$
+^notes_data_sources.md$

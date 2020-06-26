@@ -4,5 +4,8 @@
 \name{laselva-package}
 \alias{laselva-package}
 \alias{laselva}
-\title{get FIA data}
+\title{laselva}
+\description{
+Access to global forest inventory data
+}
 \keyword{package}
