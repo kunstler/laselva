@@ -34,7 +34,7 @@ GitHub username, and links to relevant issue(s)/PR(s).
 
 ### Code of Conduct
 
-Please note that the {{{ package }}} project is released with a
+Please note that the `laselva` project is released with a
 [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By contributing to this
 project you agree to abide by its terms.
 
@@ -44,13 +44,3 @@ for further details.
 ### Discussion forum
 
 Check out our [discussion forum](https://discuss.ropensci.org) if you think your issue requires a longer form discussion.
-
-### Prefer to Email? 
-
-Email the person listed as maintainer in the `DESCRIPTION` file of this repo.
-
-Though note that private discussions over email don't help others - of course email is totally warranted if it's a sensitive problem of any kind.
-
-### Thanks for contributing!
-
-This contributing guide is adapted from the tidyverse contributing guide available at https://raw.githubusercontent.com/r-lib/usethis/master/inst/templates/tidy-contributing.md 
