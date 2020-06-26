@@ -6,3 +6,5 @@ README.Rmd
 ^NEWS\.md$
 ^Makefile$
 ^CONTRIBUTING\.md$
+^codemeta\.json$
+^Makefile$

@@ -6,7 +6,8 @@ Version: 0.0.5.9100
 Authors@R: c(person("Scott", "Chamberlain", role = c("aut", "cre"),
     email = "myrmecocystus@gmail.com"))
 License: MIT + file LICENSE
-URL: https://github.com/ropenscilabs/laselva
+URL: https://github.com/ropenscilabs/laselva (source)
+  https://docs.ropensci.org/laselva/ (docs)
 BugReports: https://github.com/ropenscilabs/laselva/issues
 Roxygen: list(wrap = FALSE)
 Imports:
