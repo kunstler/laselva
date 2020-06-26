@@ -41,7 +41,7 @@
 ls_fetch_usa <- function(state, what = "tree", ...) {
   stopifnot(inherits(what, "character"))
   stopifnot(length(what) >= 1)
-  if (state == 'all') {
+  if ('all' %in% state) {
     urls <- file.path(fia_base(), "fia/datamart/CSV", paste0(what, ".zip"))
   } else {
     urls <- unlist(lapply(state, function(x) {
@@ -51,6 +51,6 @@ ls_fetch_usa <- function(state, what = "tree", ...) {
   nms <- gsub("\\.zip", "", basename(urls))
   stats::setNames(lapply(urls, function(z) {
     xx <- cache_GET(z, "usa-fia", ...)
-    suppressMessages(readr::read_csv(un_zip(xx)))
+    suppressMessages(f_read(un_zip(xx)))
   }), nms)
 }

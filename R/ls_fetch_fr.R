@@ -48,9 +48,9 @@ ls_fetch_fr <- function(year, ...) {
   assert(year, c("numeric", "integer"))
   stopifnot(year <= 2018, year >= 2005)
   url <- file.path(fr_base(), sprintf("%s-en.zip", year))
-  xx <- cache_GET(url, "france-ign", verbose=TRUE)
+  xx <- cache_GET(url, "france-ign", ...)
   csv_files <- suppressMessages(un_zip(xx))
-  bb <- suppressMessages(lapply(csv_files, readr::read_delim, delim = ";"))
+  bb <- suppressMessages(lapply(csv_files, f_read, sep = ";"))
   stats::setNames(bb, basename(csv_files))
 }
 
@@ -60,9 +60,9 @@ ls_fetch_fr_revisit <- function(year, ...) {
   assert(year, c("numeric", "integer"))
   stopifnot(year <= 2018, year >= 2005)
   url <- file.path(fr_base(), sprintf("%s-%s-en.zip", year, year + 5))
-  xx <- cache_GET(url, "france-ign", verbose=TRUE)
+  xx <- cache_GET(url, "france-ign", ...)
   csv_files <- suppressMessages(un_zip(xx))
-  bb <- suppressMessages(lapply(csv_files, readr::read_delim, delim = ";"))
+  bb <- suppressMessages(lapply(csv_files, f_read, sep = ";"))
   stats::setNames(bb, basename(csv_files))
 }
 

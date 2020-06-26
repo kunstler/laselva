@@ -1,0 +1,760 @@
+﻿"donnee";"code";"libelle";"libelle_gb"
+ABOND;"1";"0 à 5 % (présence faible)";"0 to 5% (low importance)"
+ABOND;"2";"0 à 25 % (présence nette)";"0 to 25% (clear importance)"
+ABOND;"3";"25 à 50 %";"25 to 50%"
+ABOND;"4";"50 à 75 %";"50 to 75%"
+ABOND;"5";"75 à 100 %";"75 to 100%"
+ACCI;"0";pas d'accident;no accident
+ACCI;"1";arbre cassé;broken tree
+ACCI;"2";arbre penché;leaning tree
+ACCI;"3";arbre courbé;bent tree
+ACCI;"4";arbre brûlé;burned tree
+ASPERITE;"0";non accidenté;not rugged
+ASPERITE;"1";accidenté;rugged
+ASPERITE;"2";très accidenté;very rugged
+ASPERITE;X;sans objet;not applicable
+AUTUT;"0";pas d'autre utilisation;no other use
+AUTUT;A;agricole;agricultural
+AUTUT;F;pare-feux;firebreak
+AUTUT;G;chasse;hunt
+AUTUT;L;accueil et loisirs;recreational facilities
+AUTUT;M;terrain militaire;military area
+AUTUT;R;espace protégé;protected area
+AUTUT;T;passage de réseau;energetic system crossing
+CAM;"01";"0-5 ans";"0-5 years old"
+CAM;"02";"5-10 ans";"5-10 years old"
+CAM;"03";"10-15 ans";"10-15 years old"
+CAM;"04";"15-20 ans";"15-20 years old"
+CAM;"05";"20-25 ans";"20-25 years old"
+CAM;"06";"25-30 ans";"25-30 years old"
+CAM;"07";>= 30 ans;>= 30 years old
+CSA;"1";couverture boisée fermée;closed forest canopy
+CSA;"2";bosquet;copse
+CSA;"3";couverture boisée ouverte;open forest canopy
+CSA;"5";peupleraie;poplar grove
+CSLISI;"4L";lande;moor
+CSLISI;"6";autre végétation;other vegetation
+CSLISI;"7";terrain artificialisé sans végétation;artificial field without vegetation
+CSLISI;"8";terrain naturel sans végétation;natural field without vegetation
+CSLISI;"9";eau continentale;continental water
+CSLISI;T;passage de réseau;energetic system crossing
+DATEMORT;"1";"5 ans ou moins";"5 years or less"
+DATEMORT;"2";plus de 5 ans;more than 5 years
+DC;"0";pas de coupe;no cut
+DC;"1";plus de 90 % du couvert;over 90% of the cover
+DC;"2";de 50 à 90 % du couvert;"50 to 90% of the cover"
+DC;"3";de 15 à 50 % du couvert;"15 to 50% of the cover"
+DC;"4";moins de 15 % du couvert;less than 15% of the cover
+DCESPAR1;"02";Chene pedoncule;pedunculate oak
+DCESPAR1;"03";Chene sessile;sessile oak
+DCESPAR1;"05";Chene pubescent;pubescent oak
+DCESPAR1;"06";Chene vert;evergreen oak
+DCESPAR1;"07";Chene tauzin;pyrenean oak
+DCESPAR1;"09";Hetre;beech
+DCESPAR1;"10";Chataignier;chestnut tree
+DCESPAR1;"11";Charme;hornbeam
+DCESPAR1;"12P";Bouleau pubescent;downy birch
+DCESPAR1;"12V";Bouleau verruqueux;silver birch
+DCESPAR1;"13G";Aulne glutineux;common alder
+DCESPAR1;"14";Robinier faux acacia;false acacia
+DCESPAR1;"15S";Erable sycomore;sycamore maple
+DCESPAR1;"17C";Frene commun;european ash
+DCESPAR1;"19";Peuplier cultive;cultivated poplar
+DCESPAR1;"24";Tremble;aspen
+DCESPAR1;"31";Noisetier coudrier;common hazel
+DCESPAR1;"51";Pin maritime;maritime pine
+DCESPAR1;"52";Pin sylvestre;scots pine
+DCESPAR1;"53CA";Pin laricio de calabre;calabrian black pine
+DCESPAR1;"61";Sapin pectine;silver fir
+DCESPAR1;"62";Epicea commun;norway spruce
+DCESPAR1;"63";Meleze d'europe;european larch
+DCESPAR1;"64";Douglas;douglas fir
+DCESPAR1;"73";Epicea de sitka;sitka spruce
+DECOUPE;"0";découpe bois fort régulière;net merchandable timber at 7cm DBH
+DECOUPE;"1";découpe de forme avec surbille(s);shaped partial cut with second log(s)
+DECOUPE;"2";découpe de forme sans surbille(s);shaped partial cut without second log(s)
+DENIVRIV;"0";moins de 3 m;less than 3m
+DENIVRIV;"1";entre 3 et 10 m;between 3 and 10m
+DENIVRIV;"2";plus de 10 m;more than 10m
+DIST;"0";inférieure à 200 m;below 200m
+DIST;"1";de 200 à 500 m;"200 to 500m"
+DIST;"2";de 500 à 1000 m;"500 to 1000m"
+DIST;"3";de 1000 à 2000 m;"1000 to 2000m"
+DIST;"4";supérieure à 2000 m;over 2000m
+DISTRIV;"0";absence;absence
+DISTRIV;"1";moins de 15 m;less than 15m
+DISTRIV;"2";entre 15 et 25 m;between 15 and 25m
+DISTRIV;"3";entre 25 et 50 m;between 25 and 50m
+ENTP;"0";entretien soigné;careful management
+ENTP;"1";entretien visible;noticeable management
+ENTP;"2";entretien abandonné;neglected management
+ESPAR;"02";Chene pedoncule;pedunculate oak
+ESPAR;"03";Chene sessile;sessile oak
+ESPAR;"04";Chene rouge;red oak
+ESPAR;"05";Chene pubescent;pubescent oak
+ESPAR;"06";Chene vert;evergreen oak
+ESPAR;"07";Chene tauzin;pyrenean oak
+ESPAR;"08S";Chene-liege;cork oak
+ESPAR;"09";Hetre;beech
+ESPAR;"10";Chataignier;chestnut tree
+ESPAR;"11";Charme;hornbeam
+ESPAR;"12P";Bouleau pubescent;downy birch
+ESPAR;"12V";Bouleau verruqueux;silver birch
+ESPAR;"13B";Aulne blanc;grey alder
+ESPAR;"13C";Aulne de corse;italian alder
+ESPAR;"13G";Aulne glutineux;common alder
+ESPAR;"14";Robinier faux acacia;false acacia
+ESPAR;"15P";Erable plane;norway maple
+ESPAR;"15S";Erable sycomore;sycamore maple
+ESPAR;"16";Micocoulier;nettle tree
+ESPAR;"17C";Frene commun;european ash
+ESPAR;"17F";Frene a fleur;flowering ash
+ESPAR;"17O";Frene oxyphylle;narrow-leafed ash
+ESPAR;"18C";Orme champetre;english elm
+ESPAR;"18D";Orme lisse;european white elm
+ESPAR;"18M";Orme de montagne;wych elm
+ESPAR;"19";Peuplier cultive;cultivated poplar
+ESPAR;"20G";Tilleul a grandes feuilles;small-leaved lime
+ESPAR;"20P";Tilleul a petites feuilles;large-leaved lime
+ESPAR;"21C";Erable champetre;field maple
+ESPAR;"21M";Erable de montpellier;montpellier maple
+ESPAR;"21O";Erable a feuilles d'obier;italian maple
+ESPAR;"22C";Cerisier;cherry
+ESPAR;"22G";Cerisier a grappes;bird cherry
+ESPAR;"22M";Merisier;wild cherry
+ESPAR;"22S";Cerisier tardif;black cherry
+ESPAR;"23A";Amandier;almond tree
+ESPAR;"23AB";Alisier blanc;common whitebeam
+ESPAR;"23AF";Alisier de fontainebleau;broad-leaved whitebeam
+ESPAR;"23AM";Alisier de mougeot;mougeot's whitebeam
+ESPAR;"23C";Cormier;service-tree
+ESPAR;"23F";Figuier de carie;common fig
+ESPAR;"23PA";Poirier a feuilles d'amandier;almond-leaved pear
+ESPAR;"23PC";Poirier commun;common pear
+ESPAR;"23PD";Prunier domestique;plum
+ESPAR;"23PF";Poirier a feuilles en cour;plymouth pear
+ESPAR;"23PM";Pommier sauvage;crab apple
+ESPAR;"23SO";Sorbier des oiseleurs;rowan
+ESPAR;"24";Tremble;aspen
+ESPAR;"25B";Saule blanc;white willow
+ESPAR;"25C";Saule cendre;grey willow
+ESPAR;"25D";Saule drape;olive willow
+ESPAR;"25E3";Saule a trois etamines;almond willow
+ESPAR;"25FR";Saule cassant;crack willow
+ESPAR;"25M";Saule marsault;goat willow
+ESPAR;"25R";Saule roux;large grey willow
+ESPAR;"25V";Saule des vanniers;basket willow
+ESPAR;"26E";Platane a feuilles d'erable;hybrid plane
+ESPAR;"26OC";Platane d'occident;london plane
+ESPAR;"27C";Noyer commun;english walnut
+ESPAR;"27N";Noyer noir;black walnut
+ESPAR;"28";Olivier d'europe;wild olive
+ESPAR;"29AF";Autre feuillu (espece ligneuse feuillue sans code espar);other broadleaved trees
+ESPAR;"29AI";Ailante;tree of heaven
+ESPAR;"29CM";Chene des marais;pin oak
+ESPAR;"29EN";Erable negundo;box elder
+ESPAR;"29MA";Marronnier d'inde;horse chestnut
+ESPAR;"29MI";Mimosa;sweet acacia
+ESPAR;"31";Noisetier coudrier;common hazel
+ESPAR;"32";Charme houblon;european hop-hornbeam
+ESPAR;"33B";Peuplier blanc;silver poplar
+ESPAR;"33G";Peuplier grisard;grey poplar
+ESPAR;"33N";Peuplier noir;black poplar
+ESPAR;"34";Chene chevelu;turkey oak
+ESPAR;"37";Aulne vert;green alder
+ESPAR;"38AL";Cytise des alpes;scottish laburnum
+ESPAR;"38AU";Cytise aubour;common laburnum
+ESPAR;"39";Cornouiller male;dogwood
+ESPAR;"40";Arbousier;strawberry tree
+ESPAR;"41";Alisier torminal;wild service tree
+ESPAR;"42";Tulipier de virginie;american tulip tree
+ESPAR;"49AE";Aubepine epineuse;english hawthorn
+ESPAR;"49AM";Aubepine monogyne;common hawthorn
+ESPAR;"49BO";Bourdaine;alder buckthorn
+ESPAR;"49BS";Buis;common box
+ESPAR;"49EA";Bruyere arborescente;tree heath
+ESPAR;"49EV";Fusain d'europe;spindle
+ESPAR;"49FA";Filaire a feuilles etroites;narrow-leaved phillyrea
+ESPAR;"49FL";Filaire a feuilles larges;jasmine box
+ESPAR;"49IA";Houx;common holly
+ESPAR;"49LN";Laurier noble;sweet bay
+ESPAR;"49PC";Prune-cerise;cherry plum
+ESPAR;"49PL";Pistachier lentisque;mastic tree
+ESPAR;"49PM";Cerisier de sainte-lucie;mahaleb cherry
+ESPAR;"49PS";Prunelier;blackthorn
+ESPAR;"49PT";Pistachier terebinthe;terebinth
+ESPAR;"49RA";Nerprun alaterne;mediterranean buckthorn
+ESPAR;"49RC";Nerprun purgatif;commun buckthorn
+ESPAR;"49RP";Nerprun des alpes;alpine buckthorn
+ESPAR;"49SN";Sureau noir;elder
+ESPAR;"49SR";Sureau rouge;red elderberry
+ESPAR;"51";Pin maritime;maritime pine
+ESPAR;"52";Pin sylvestre;scots pine
+ESPAR;"53CA";Pin laricio de calabre;calabrian black pine
+ESPAR;"53CO";Pin laricio de corse;corsican pine
+ESPAR;"53S";Pin de salzmann;pyrenean pine
+ESPAR;"54";Pin noir d'autriche;black pine
+ESPAR;"55";Pin parasol;italian stone pine
+ESPAR;"56";Pin weymouth;northern white pine
+ESPAR;"57A";Pin d'alep;aleppo pine
+ESPAR;"57B";Pin brutia (ou) eldarica;brutia or elderica pine
+ESPAR;"58";Pin a crochets;mountain pine
+ESPAR;"59";Pin cembro;arolla pine
+ESPAR;"61";Sapin pectine;silver fir
+ESPAR;"62";Epicea commun;norway spruce
+ESPAR;"63";Meleze d'europe;european larch
+ESPAR;"64";Douglas;douglas fir
+ESPAR;"65";Cedre de l'atlas;atlas cedar
+ESPAR;"66";Cypres de provence;mediterranean cypress
+ESPAR;"67";If;yew
+ESPAR;"68CA";Cypres de l'arizona;arizona cypress
+ESPAR;"68CE";Autre resineux (espece ligneuse resineuse sans code espar);other coniferous trees
+ESPAR;"68CL";Cypres de lawson;lawson cypress
+ESPAR;"68CM";Cypres de lambert;monterey cypress
+ESPAR;"68PM";Pin de monterey;monterey pine
+ESPAR;"68SG";Sequoia geant;western redcedar
+ESPAR;"68TG";Thuya geant;western redcedar
+ESPAR;"68TH";Tsuga heterophylle;western hemlock
+ESPAR;"69JC";Genevrier commun;common juniper
+ESPAR;"69JO";Genevrier oxycedre;cade juniper
+ESPAR;"71";Sapin de nordmann;nordmann's fir
+ESPAR;"72V";Sapin de vancouver;vancouver fir
+ESPAR;"73";Epicea de sitka;sitka spruce
+ESPAR;"74J";Meleze du japon;japanese larch
+ESPAR;"77";Pin a l'encens et hybrides;lolbolly pine and hybrids
+GEST;"0";aucune trace;no sign
+GEST;"1";traces faibles;small signs
+GEST;"2";signes manifestes;obvious signs
+HUMUS;"10";mor;mor
+HUMUS;"15";mor carbonaté;carbonated mor
+HUMUS;"18";hydromor;hydromor
+HUMUS;"20";moder;moder
+HUMUS;"21";dysmoder;dysmoder
+HUMUS;"22";hemi-moder;hemimoder
+HUMUS;"25";moder carbonaté;carbonated moder
+HUMUS;"28";hydromoder;hydromoder
+HUMUS;"30";dysmull;dysmull
+HUMUS;"31";oligomull;oligomull
+HUMUS;"40";mesomull;mesomull
+HUMUS;"42";amphimull;amphimull
+HUMUS;"45";mull carbonaté épais;thick carbonated mull
+HUMUS;"48";hydromull;hydromull
+HUMUS;"50";eumull;eumull
+HUMUS;"55";mull carbonaté;carbonated mull
+HUMUS;"80";tourbe;peat
+HUMUS;"81";anmoor;anmoor
+HUMUS;"99";absence ou autre;absence or other
+INCID;"0";Pas de degats;no damage
+INCID;"1";moins de 25 % de dégâts;less than 25% of damage
+INCID;"2";de 25 à 50 % de dégâts;"25 to 50% of damage"
+INCID;"3";de 50 à 75 % de dégâts;"50 to 75% of damage"
+INCID;"4";plus de 75 % de dégâts;over 75% of damage
+ITI;"0";sans objet;not applicable
+ITI;"1";itinéraire existant;existing itinerary
+ITI;"2";itinéraire à créer;itinerary to create
+ITI;"3";Inaccessible;inaccessible
+LIB;"0";couvert libre nul;no free growing trees
+LIB;"1";inférieur à 2/3;inferior to 2/3
+LIB;"2";supérieur à 2/3;superior to 2/3
+MORTB;"0";moins de 5 %;less than 5%
+MORTB;"1";entre 5 et 25 %;between 5 and 25%
+MORTB;"2";entre 25 à 50 %;between 25 and 50%
+MORTB;"3";entre 50 à 95 %;between 50 and 95%
+MORTB;"4";plus de 95 %;over 95%
+NINCID;"0";pas d’incident;no incident
+NINCID;"1";incendie;forest fire
+NINCID;"2";mortalité;mortality
+NINCID;"3";mouvement de terrain;landslide
+NINCID;"4";tempête;storm
+NINCID;"5";autre incident;other incident
+OBSCHEMIN;"0";absence de chemin;absence of path
+OBSCHEMIN;"1";présence de chemin;presence of path
+OBSDATE;"0";pas d'observation;no observation
+OBSDATE;"1";sol couvert de neige;ground covered by snow
+OBSDATE;"2";sol gelé;ground covered by ice
+OBSDATE;"3";sol couvert d'eau;ground covered by water
+OBSHYDR;"0";pas d'observation;no observation
+OBSHYDR;"1";en surface liée au tassement;on the surface due to soil compaction
+OBSHYDR;"2";cailloux oxydés;oxyded stones
+OBSHYDR;"3";confusion avec le substrat;confusion with the substratum
+OBSHYDR;"4";masquée par l'humus;hidden by humus
+OBSHYDR;"5";nappe d'eau dans le sol;groundwater table
+OBSHYDR;"6";taches > 75 % à moins de 64 cm;stains > 75% at less than 64cm
+OBSPEDO;"0";pas d'observation;no observation
+OBSPEDO;"1";humus perturbé ou absent;no humus or disturbed humus
+OBSPEDO;"2";sol perturbé ou absent;no soil or disturbed soil
+OBSPEDO;"3";sol hétérogène;heterogeneous soil
+OBSPEDO;"4";décharge, remblai, dépôt artificiel;tip, embankment, artificial yard
+OBSPEDO;"5";pas de fosse pédologique;no soil pit
+OBSPEDO;"6";trou, extraction, mardelle, mur;hole, mining, sinkhole, wall
+OBSPEDO;"7";humus hétérogène;heterogeneous humus
+OBSPEDO;"8";humus de prairie;prairial humus
+OBSPEDO;"9";Donnee manquante;lack of data
+OBSPROF;"0";pas d'observation;no observation
+OBSPROF;"1";arrêt sur dalle (R);stop on slab
+OBSPROF;"2";arrêt sur cailloux;stop on stones
+OBSPROF;"3";arrêt sur compacité;stop on density
+OBSPROF;"4";PROF2 surestimée;overestimated PROF2
+OBSTOPO;"0";pas d'observation;no observation
+OBSTOPO;"1";terrasses ≤ 6 m;terraces ≤ 6m
+OBSTOPO;"2";terrasses > 6 m;terraces > 6m
+OBSTOPO;"3";banquettes de reboisement;reforestation strips
+OBSTOPO;"4";topographie variée;varied topography
+OBSTOPO;"5";mosaïque topographique;topographic mosaic
+OBSTOPO;"6";talus, micro versant;slope, microslope
+OBSTOPO;"9";Donnee manquante;no data
+OBSVEGET;"0";pas d'observation;no observation
+OBSVEGET;"1";incendie;forest fire
+OBSVEGET;"2";exploitation, tempête;logging, storm
+OBSVEGET;"3";activité agricole;agricultural activity
+OBSVEGET;"4";travaux superficiels;superficial work
+OBSVEGET;"5";flore hétérogène;heterogeneous flora
+OBSVEGET;"6";autre perturbation;other perturbation
+OBSVEGET;"9";Donnee manquante;no data
+ORI;"0";Issu de rejet;from shoot
+ORI;"1";Issu de semence;from seed
+ORI;"2";Autre origine;other origin
+PENTEXP;"0";"0 à 15 %";"0 to 15%"
+PENTEXP;"1";"15 à 30 %";"15 to 30%"
+PENTEXP;"2";"30 à 45 %";"30 to 45%"
+PENTEXP;"3";"45 à 60 %";"45 to 60%"
+PENTEXP;"4";"60 à 100 %";"60 to 100%"
+PENTEXP;"5";plus de 100 %;over 100%
+PENTEXP;X;sans objet;not applicable
+PEUPNR;"0";peuplement recensable;inventoried stand (DBH >= 7.5 cm)
+PEUPNR;"1";peuplement non recensable;not inventoried stand (DBH < 7.5 cm)
+PEUPNR;"2";momentanément déboisé;temporarily deforested
+PLISI;"0";pas de lisière;no border
+PLISI;"1";au moins une lisière;at least one border
+PLISI;"2";interruption moins de 20 m;interruption less than 20m
+PORTANCE;"0";jamais portant;forest unsuitable soils
+PORTANCE;"1";temporairement non portant;forest temporarily unsuitable soils
+PORTANCE;"2";toujours portant;forest always suitable soils
+PORTANCE;X;Sans objet;not applicable
+QUALITE;BI;qualité médiocre;mediocre quality
+QUALITE;S+;qualité exceptionnelle;exceptional quality
+QUALITE;S1;première qualité;first quality
+QUALITE;S2;deuxième qualité;second quality
+ROCHE;"101";roches plutoniques;plutonic rocks
+ROCHE;"102";roches volcaniques;volcanic rocks
+ROCHE;"110";granites;granite
+ROCHE;"116";rhyolites;rhyolite
+ROCHE;"123";trachytes;trachyte
+ROCHE;"130";diorites;diorite
+ROCHE;"132";andésites;andesite
+ROCHE;"140";gabbros;gabbro
+ROCHE;"143";basaltes;basalt
+ROCHE;"153";phonolites;phonolite
+ROCHE;"160";projections volcaniques;volcanic projection
+ROCHE;"210";roches siliceuses détritiques consolidées;consolidated detritic siliceous rocks
+ROCHE;"211";conglomérats siliceux;siliceous conglomerate
+ROCHE;"212";grès siliceux;siliceous sandstone
+ROCHE;"213";quartzites;quartzite
+ROCHE;"230";roches siliceuses détritiques non consolidées;non consolidated detritic siliceous rocks
+ROCHE;"231";blocs;blocks
+ROCHE;"232";pierrailles;chipping
+ROCHE;"233";sables;sand
+ROCHE;"234";limons;silt
+ROCHE;"236";sables à silex;sand with flint
+ROCHE;"237";arènes;arena
+ROCHE;"238";formations meubles à galets siliceux;loose deposite with siliceous pebble
+ROCHE;"239";moraines siliceuses;siliceous moraines
+ROCHE;"241";silex;flint
+ROCHE;"242";meulières;burstone
+ROCHE;"243";gaizes;glauconiferous sandstone
+ROCHE;"310";calcaires consolidés;consolidated limestone
+ROCHE;"312";calcaires grossiers;coarse limestone
+ROCHE;"313";conglomérats calcaires;calcareous conglomerate
+ROCHE;"314";grès calcaires;calcareous sandstone
+ROCHE;"316";flysch;flysh
+ROCHE;"330";roches calcaires non consolidées;non consolidated limestone rock
+ROCHE;"331";blocs calcaires;calcareous block
+ROCHE;"332";pierrailles calcaires;calcareous chipping
+ROCHE;"333";sables calcaires;calcareous sand
+ROCHE;"334";limons calcaires;calcareous silt
+ROCHE;"338";formations calcaires meubles à galets calcaires;loose calcareous deposite with calcareous pebble
+ROCHE;"339";moraines calcaires;calcareous moraines
+ROCHE;"381";craies;white chalk
+ROCHE;"403";calcaires dolomitiques;dolomitic limestone
+ROCHE;"404";dolomies;dolomite
+ROCHE;"407";calcaires marneux;marly limestone
+ROCHE;"408";marnes;marl
+ROCHE;"410";calcaires à rognons gréseux-siliceux;limestone with gritty nodule
+ROCHE;"500";roches sédimentaires argileuses;clayey sedimentary rock
+ROCHE;"506";argile à silex;flint clay
+ROCHE;"600";roches sédimentaires schisteuses;schist sedimentary rock
+ROCHE;"604";calcschistes;calcareous schist
+ROCHE;"712";gypse;gypsum
+ROCHE;"730";famille des roches ferrugineuses;ferruginous rocks family
+ROCHE;"750";famille des roches carbonées;carbon rocks family
+ROCHE;"751";tourbes;peat
+ROCHE;"800";roches métamorphiques;metamorphic rocks family
+ROCHE;"810";schistes métamorphiques;metamorphic schist
+ROCHE;"811";gneiss;gneiss
+ROCHE;"812";micaschistes;micaschist
+ROCHE;"822";ophiolites-serpentines;serpentine
+ROCHE;"900";roches particulières;particular rock
+ROCHE;"910";terrils de mines;mining residues
+ROCHE;"911";dépôts artificiels;artificial depositions
+ROCHE;"930";formations meubles siliceuses et carbonatées;siliceous and carbonated loose deposite with mixed pebble
+ROCHE;"932";mélange de cailloux calcaires et siliceux;calcareous and siliceous stones mix
+ROCHE;"936";formations meubles à silex sur calcaire;loose deposite with flint on limestone
+ROCHE;"938";formations meubles siliceuses et carbonatées à galets;siliceous and carbonated loose deposite with pebble
+ROCHE;"939";moraines mélangées;mixed moraines
+ROCHE;"999";autre ou absence;other or absence
+SER_86;A11;Ouest-Bretagne et Nord-Cotentin;Ouest-Bretagne et Nord-Cotentin
+SER_86;A12;Pays de Saint-Malo;Pays de Saint-Malo
+SER_86;A13;Bocage normand et Pays de Fougères;Bocage normand et Pays de Fougères
+SER_86;A21;Bretagne méridionale;Bretagne méridionale
+SER_86;A22;Bocage armoricain;Bocage armoricain
+SER_86;A30;Bocage vendéen;Bocage vendéen
+SER_86;B10;Côtes et plateaux de la Manche;Côtes et plateaux de la Manche
+SER_86;B21;Flandres;Flandres
+SER_86;B22;Plaine picarde;Plaine picarde
+SER_86;B23;Mosan, Thiérache et Hainaut;Mosan, Thiérache et Hainaut
+SER_86;B31;Campagne de Caen et Pays d'Auge;Campagne de Caen et Pays d'Auge
+SER_86;B32;Plateaux de l'Eure;Plateaux de l'Eure
+SER_86;B33;Perche;Perche
+SER_86;B41;Bassin parisien tertiaire;Bassin parisien tertiaire
+SER_86;B42;Brie et Tardenois;Brie et Tardenois
+SER_86;B43;Champagne crayeuse;Champagne crayeuse
+SER_86;B44;Beauce;Beauce
+SER_86;B51;Champagne humide;Champagne humide
+SER_86;B52;Pays d'Othe et Gâtinais oriental;Pays d'Othe et Gâtinais oriental
+SER_86;B53;Pays-Fort, Nivernais et plaines prémorvandelles;Pays-Fort, Nivernais et plaines prémorvandelles
+SER_86;B61;Baugeois-Maine;Baugeois-Maine
+SER_86;B62;Champeigne-Gâtine tourangelle;Champeigne-Gâtine tourangelle
+SER_86;B70;Sologne-Orléanais;Sologne-Orléanais
+SER_86;B81;Loudunais et Saumurois;Loudunais et Saumurois
+SER_86;B82;Brenne et Brandes;Brenne et Brandes
+SER_86;B91;Boischaut et Champagne berrichonne;Boischaut et Champagne berrichonne
+SER_86;B92;Bourbonnais et Charolais;Bourbonnais et Charolais
+SER_86;C11;Ardenne primaire;Ardenne primaire
+SER_86;C12;Argonne;Argonne
+SER_86;C20;Plateaux calcaires du Nord-Est;Plateaux calcaires du Nord-Est
+SER_86;C30;Plaines et dépressions argileuses du Nord-Est;Plaines et dépressions argileuses du Nord-Est
+SER_86;C41;Plaine d'Alsace;Plaine d'Alsace
+SER_86;C42;Sundgau alsacien et belfortain;Sundgau alsacien et belfortain
+SER_86;C51;Saône, Bresse et Dombes;Saône, Bresse et Dombes
+SER_86;C52;Plaines et piémonts alpins;Plaines et piémonts alpins
+SER_86;D11;Massif vosgien central;Massif vosgien central
+SER_86;D12;Collines périvosgiennes et Warndt;Collines périvosgiennes et Warndt
+SER_86;E10;Premier plateau du Jura;Premier plateau du Jura
+SER_86;E20;Deuxième plateau et Haut-Jura;Deuxième plateau et Haut-Jura
+SER_86;F11;Terres rouges;Terres rouges
+SER_86;F12;Groies;Groies
+SER_86;F13;Marais littoraux;Marais littoraux
+SER_86;F14;Champagne charentaise;Champagne charentaise
+SER_86;F15;Périgord;Périgord
+SER_86;F21;Landes de Gascogne;Landes de Gascogne
+SER_86;F22;Dunes atlantiques;Dunes atlantiques
+SER_86;F23;Bazadais, Double et Landais;Bazadais, Double et Landais
+SER_86;F30;Coteaux de la Garonne;Coteaux de la Garonne
+SER_86;F40;Causses du Sud-Ouest;Causses du Sud-Ouest
+SER_86;F51;Adour atlantique;Adour atlantique
+SER_86;F52;Collines de l'Adour;Collines de l'Adour
+SER_86;G11;Châtaigneraie du Centre et de l'Ouest;Châtaigneraie du Centre et de l'Ouest
+SER_86;G12;Marches du Massif central;Marches du Massif central
+SER_86;G13;Plateaux limousins;Plateaux limousins
+SER_86;G21;Plateaux granitiques ouest du Massif central;Plateaux granitiques ouest du Massif central
+SER_86;G22;Plateaux granitiques du centre du Massif central;Plateaux granitiques du centre du Massif central
+SER_86;G23;Morvan et Autunois;Morvan et Autunois
+SER_86;G30;Massif central volcanique;Massif central volcanique
+SER_86;G41;Bordure Nord-Est du Massif central;Bordure Nord-Est du Massif central
+SER_86;G42;Monts du Vivarais et du Pilat;Monts du Vivarais et du Pilat
+SER_86;G50;Ségala et Châtaigneraie auvergnate;Ségala et Châtaigneraie auvergnate
+SER_86;G60;Grands Causses;Grands Causses
+SER_86;G70;Cévennes;Cévennes
+SER_86;G80;Haut-Languedoc et Lévézou;Haut-Languedoc et Lévézou
+SER_86;G90;Plaines alluviales et piémonts du Massif central;Plaines alluviales et piémonts du Massif central
+SER_86;H10;Préalpes du Nord;Préalpes du Nord
+SER_86;H21;Alpes externes du Nord;Alpes externes du Nord
+SER_86;H22;Alpes internes du Nord;Alpes internes du Nord
+SER_86;H30;Alpes externes du Sud;Alpes externes du Sud
+SER_86;H41;Alpes intermédiaires du Sud;Alpes intermédiaires du Sud
+SER_86;H42;Alpes internes du Sud;Alpes internes du Sud
+SER_86;I11;Piémont pyrénéen;Piémont pyrénéen
+SER_86;I12;Pyrénées cathares;Pyrénées cathares
+SER_86;I13;Corbières;Corbières
+SER_86;I21;Haute-chaîne pyrénéenne;Haute-chaîne pyrénéenne
+SER_86;I22;Pyrénées catalanes;Pyrénées catalanes
+SER_86;J10;Garrigues;Garrigues
+SER_86;J21;Roussillon;Roussillon
+SER_86;J22;Plaines et collines rhodaniennes et languedociennes;Plaines et collines rhodaniennes et languedociennes
+SER_86;J23;Provence calcaire;Provence calcaire
+SER_86;J24;Secteurs niçois et préligure;Secteurs niçois et préligure
+SER_86;J30;Maures et Esterel;Maures et Esterel
+SER_86;J40;Préalpes du Sud;Préalpes du Sud
+SER_86;K11;Corse occidentale;Corse occidentale
+SER_86;K12;Montagne corse;Montagne corse
+SER_86;K13;Corse orientale;Corse orientale
+SFCOEUR;"0";absence de pourriture;no rot
+SFCOEUR;"1";présence de pourriture;rot
+SFDORGE;"0";absence de balai et de chaudron;absence of witches' broom and gall on the trunk
+SFDORGE;"1";présence de balai(s);presence of witches' broom(s)
+SFDORGE;"2";présence de chaudron(s);presence of gall(s) on the trunk
+SFGELIV;"0";absence de gélivure;no winter injury
+SFGELIV;"1";une seule gélivure;only one winter injury
+SFGELIV;"2";deux gélivures au moins;at least two winter injuries
+SFGUI;"0";absence de gui;no mistletoe
+SFGUI;"1";"1 ou 2 boules de gui";"1 or 2 branches of mistletoe"
+SFGUI;"2";"3 à 5 boules de gui";"3 to 5 branches of mistletoe"
+SFGUI;"3";plus de 5 boules de gui;over 5 branches of mistletoe
+SIMPLIF;"0";arbre non simplifié;not simplified tree
+SIMPLIF;"1";arbre simplifié;simplified tree
+SVER;"0";Momentanement deboise;temporarily deforested
+SVER;"2";futaie régulière basse;low regular timber
+SVER;"3";autre peuplement régulier bas;other low regular stand
+SVER;"4";structure verticale irrégulière;irregular vertical structure
+SVER;"5";régulière haute avec sous-étage;high regular structure with understory
+SVER;"6";régulière haute sans sous-étage;high regular structure without understory
+SVER;X;Structure de boisement ouvert;open stand structure
+TEXT1;"0";absence;absence
+TEXT1;"1";sable;sand
+TEXT1;"2";sable limoneux;silty sand
+TEXT1;"3";sable argileux;clayey sand
+TEXT1;"4";limon sableux;sandy loam
+TEXT1;"5";limon argileux;clayey loam
+TEXT1;"6";limon;loam
+TEXT1;"7";argile limoneuse;silty clay
+TEXT1;"8";argile sablo-limoneuse;sandy loam clay
+TEXT1;"9";argile;clay
+TEXT1;H;Texture organique;organic texture
+TEXT2;"0";absence;absence
+TEXT2;"1";sable;sand
+TEXT2;"2";sable limoneux;silty sand
+TEXT2;"3";sable argileux;clayey sand
+TEXT2;"4";limon sableux;sandy loam
+TEXT2;"5";limon argileux;clayey loam
+TEXT2;"6";limon;loam
+TEXT2;"7";argile limoneuse;silty clay
+TEXT2;"8";argile sablo-limoneuse;sandy loam clay
+TEXT2;"9";argile;clay
+TEXT2;H;Texture organique;organic texture
+TFORM;"1";moins de 50 ares;less than 5000m²
+TFORM;"2";plus de 50 ares;over 5000m²
+TOPO;"0";terrain plat;flat ground
+TOPO;"1";sommet;summit
+TOPO;"2";haut de versant;high slope
+TOPO;"3";mi-versant concave;concave backslope
+TOPO;"4";mi-versant rectiligne;traight backslope
+TOPO;"5";mi-versant convexe;convex backslope
+TOPO;"6";replat;mid-slope falt
+TOPO;"7";bas de versant;footslope
+TOPO;"8";vallée ou fond de vallon large;valley or broad vale bottom
+TOPO;"9";dépression ou fond de vallon étroit;depression or narrow vale bottom
+TPESPAR1;"02";Chene pedoncule;pedunculate oak
+TPESPAR1;"03";Chene sessile;sessile oak
+TPESPAR1;"04";Chene rouge;red oak
+TPESPAR1;"09";Hetre;beech
+TPESPAR1;"10";Chataignier;chestnut tree
+TPESPAR1;"11";Charme;hornbeam
+TPESPAR1;"13B";Aulne blanc;grey alder
+TPESPAR1;"13G";Aulne glutineux;common alder
+TPESPAR1;"14";Robinier faux acacia;false acacia
+TPESPAR1;"15S";Erable sycomore;sycamore maple
+TPESPAR1;"17C";Frene commun;european ash
+TPESPAR1;"19";Peuplier cultive;cultivated poplar
+TPESPAR1;"22C";Cerisier;cherry
+TPESPAR1;"22M";Merisier;wild cherry
+TPESPAR1;"25M";Saule marsault;goat willow
+TPESPAR1;"27C";Noyer commun;english walnut
+TPESPAR1;"33G";Peuplier grisard;grey poplar
+TPESPAR1;"51";Pin maritime;maritime pine
+TPESPAR1;"52";Pin sylvestre;scots pine
+TPESPAR1;"53CO";Pin laricio de corse;corsican pine
+TPESPAR1;"54";Pin noir d'autriche;black pine
+TPESPAR1;"55";Pin parasol;italian stone pine
+TPESPAR1;"56";Pin weymouth;northern white pine
+TPESPAR1;"57A";Pin d'alep;aleppo pine
+TPESPAR1;"58";Pin a crochets;mountain pine
+TPESPAR1;"61";Sapin pectine;silver fir
+TPESPAR1;"62";Epicea commun;norway spruce
+TPESPAR1;"63";Meleze d'europe;european larch
+TPESPAR1;"64";Douglas;douglas fir
+TPESPAR1;"65";Cedre de l'atlas;atlas cedar
+TPESPAR1;"68CL";Cypres de lawson;lawson cypress
+TPESPAR1;"71";Sapin de nordmann;nordmann's fir
+TPESPAR1;"72V";Sapin de vancouver;vancouver fir
+TPESPAR1;"73";Epicea de sitka;sitka spruce
+TPESPAR1;"74J";Meleze du japon;japanese larch
+TPESPAR1;"77";Pin a l'encens et hybrides;lolbolly pine and hybrids
+TPESPAR2;"02";Chene pedoncule;pedunculate oak
+TPESPAR2;"03";Chene sessile;sessile oak
+TPESPAR2;"04";Chene rouge;red oak
+TPESPAR2;"09";Hetre;beech
+TPESPAR2;"10";Chataignier;chestnut tree
+TPESPAR2;"11";Charme;hornbeam
+TPESPAR2;"13G";Aulne glutineux;common alder
+TPESPAR2;"15P";Erable plane;norway maple
+TPESPAR2;"15S";Erable sycomore;sycamore maple
+TPESPAR2;"17C";Frene commun;european ash
+TPESPAR2;"19";Peuplier cultive;cultivated poplar
+TPESPAR2;"22M";Merisier;wild cherry
+TPESPAR2;"27C";Noyer commun;english walnut
+TPESPAR2;"27N";Noyer noir;black walnut
+TPESPAR2;"31";Noisetier coudrier;common hazel
+TPESPAR2;"42";Tulipier de virginie;american tulip tree
+TPESPAR2;"51";Pin maritime;maritime pine
+TPESPAR2;"52";Pin sylvestre;scots pine
+TPESPAR2;"53CA";Pin laricio de calabre;calabrian black pine
+TPESPAR2;"53CO";Pin laricio de corse;corsican pine
+TPESPAR2;"54";Pin noir d'autriche;black pine
+TPESPAR2;"55";Pin parasol;italian stone pine
+TPESPAR2;"58";Pin a crochets;mountain pine
+TPESPAR2;"61";Sapin pectine;silver fir
+TPESPAR2;"62";Epicea commun;norway spruce
+TPESPAR2;"63";Meleze d'europe;european larch
+TPESPAR2;"64";Douglas;douglas fir
+TPESPAR2;"65";Cedre de l'atlas;atlas cedar
+TPESPAR2;"72V";Sapin de vancouver;vancouver fir
+TPESPAR2;"73";Epicea de sitka;sitka spruce
+TPESPAR2;"74J";Meleze du japon;japanese larch
+TPLANT;"0";pas de plantation;no planting
+TPLANT;P;régulière en plein avec maille visible;full regular planting with visible mesh
+TPLANT;Q;régulière en plein sans maille visible;full regular planting without visible mesh
+TPLANT;X;autre plantation;other planting
+TSOL;"01";arenosol;arenosol
+TSOL;"02";regosol;regosol
+TSOL;"03";anthroposol;athroposol
+TSOL;"11";sol alluvial;alluvial soil
+TSOL;"12";ranker à mull;ranker with mull
+TSOL;"13";ranker à moder-mor;ranker with moder-mor
+TSOL;"14";lapiaz;karren
+TSOL;"15";lithosol sur éboulis;lithosol on rock-fall
+TSOL;"16";lithosol sur dalle compacte;lithosol on compact flagstone
+TSOL;"17";lithosol sur dalle fissurée;lithosol on fissury flagstone
+TSOL;"18";andosol;andosol
+TSOL;"19";sol colluvial;colluvial soil
+TSOL;"21";sol humocalcaire;humic calcareous soil
+TSOL;"22";sol humocalcique;humic calcic soil
+TSOL;"23";rendzine humifère;humiferous rendzina
+TSOL;"24";rendzine dolomitique;dolomitic rendzina
+TSOL;"25";rendzine grise;gray rendzina
+TSOL;"26";rendzine brunifiée;brown rendzina
+TSOL;"27";rendzine brune/rouge;brown-red rendzina
+TSOL;"28";calcaire hydromorphe;calcareous and hydromorphic soil
+TSOL;"29";rendzine colluviale;colluvial rendzina
+TSOL;"31";sol brun calcaire;calcareous brown soil
+TSOL;"32";sol brun calcique;calcic brown soil
+TSOL;"33";sol brun;brown soil
+TSOL;"34";sol brun acide;acid brown soil
+TSOL;"35";sol brun ocreux;brown sulphurous soil
+TSOL;"38";sol brun hydromorphe;hydromorphic brown soil
+TSOL;"39";sol brun colluvial;colluvial brown soil
+TSOL;"41";sol brun faiblement lessivé;weakly leached brown soil
+TSOL;"42";sol brun complexe;brown earth
+TSOL;"43";sol lessivé;leached out soil
+TSOL;"44";sol lessivé acide;acid leached out soil
+TSOL;"45";sol lessivé podzolique;slight podzolized soil
+TSOL;"48";sol lessivé hydromorphe;hydromorphic leached out soil
+TSOL;"51";sol ocre podzolique;sulphurous podzolic soil
+TSOL;"52";sol podzolique;podzolic soil
+TSOL;"53";podzol;podzol
+TSOL;"58";sol podzolique hydromorphe;hydromorphic podzolic soil
+TSOL;"59";podzol humique;humic podzol
+TSOL;"61";sol brun fersiallitique;fersiallitic brown soil
+TSOL;"62";sol rouge fersiallitique;fersiallitic red soil
+TSOL;"63";sol fersiallitique désaturé;desaturated fersiallitic soil
+TSOL;"81";pseudogley;pseudogley
+TSOL;"82";gley;fley
+TSOL;"83";tourbe;peat
+TSOL;"85";stagnogley;fley-stagnation
+TSOL;"87";pseudogley podzolique;podzolised pseudogley
+TSOL;"88";pelosol;pelosol
+TSOL;"89";gley humifère;humus-rich gley
+TSOL;"99";sol non codé;uncoded sol
+TYPCAI;"100";roches plutonique et volcanique;plutonic and volcanic rocks
+TYPCAI;"101";roche plutonique;plutonic rock
+TYPCAI;"102";roche volcanique;volcanic rock
+TYPCAI;"110";famille des granites;granitic rocks family
+TYPCAI;"116";rhyolite;rhyolite
+TYPCAI;"123";trachyte;trachyte
+TYPCAI;"130";famille des diorites;dioritic rocks family
+TYPCAI;"132";andésite;andesite
+TYPCAI;"140";famille des gabbros;gabbros family
+TYPCAI;"143";basalte;basalte
+TYPCAI;"153";phonolite;phonolite
+TYPCAI;"160";projection volcanique;volcanic projection
+TYPCAI;"172";grès siliceux et autre roche siliceuse;siliceous sandstone and other siliceous rock
+TYPCAI;"175";grès siliceux et quartzite;siliceous sandstone and quartzite
+TYPCAI;"176";grès siliceux et silex;siliceous sandstone and flint
+TYPCAI;"178";grès siliceux et galet;siliceous sandstone and pebble
+TYPCAI;"182";roche plutonique et autre roche siliceuse;plutonic rock and other siliceous rock
+TYPCAI;"185";roche plutonique et quartzite;plutonic rock and quartzite
+TYPCAI;"188";roche plutonique et galet;plutonic rock and pebble
+TYPCAI;"192";roche volcanique et autre roche siliceuse;volcanic rock and other siliceous rock
+TYPCAI;"210";roche siliceuse détritique consolidée;consolidated detritic siliceous rock
+TYPCAI;"211";conglomérat siliceux;siliceous conglomerate
+TYPCAI;"212";grès siliceux;siliceous sandstone
+TYPCAI;"213";quartzite;quartzite
+TYPCAI;"230";Roche siliceuse detritique non consolidee;non consolidated detritic siliceous rock
+TYPCAI;"231";bloc siliceux;siliceous block
+TYPCAI;"232";pierraille siliceuse;siliceous chipping
+TYPCAI;"233";Sable;sand
+TYPCAI;"234";Limon;silt
+TYPCAI;"236";Sable a silex;flint-bearing sand
+TYPCAI;"237";arène siliceuse;siliceous arena
+TYPCAI;"238";galets siliceux;siliceous pebble
+TYPCAI;"239";Moraine siliceuse;siliceous moraine
+TYPCAI;"241";silex;flint
+TYPCAI;"242";meulière;burstone
+TYPCAI;"243";gaize;glauconiferous sandstone
+TYPCAI;"310";calcaire consolide;consolidated limestone
+TYPCAI;"312";calcaire grossier;coarse limestone
+TYPCAI;"313";conglomérat calcaire;calcareous conglomerate
+TYPCAI;"314";grès calcaire;calcareous sandstone
+TYPCAI;"316";Flysch;flysh
+TYPCAI;"330";Roche calcaire non consolidee;not consolidated calcareous rock
+TYPCAI;"331";bloc calcaire;calcareous block
+TYPCAI;"332";pierraille calcaire;calcareous chipping
+TYPCAI;"333";Sable calcaire;calcareous sand
+TYPCAI;"334";Limon calcaire;calcareous silt
+TYPCAI;"337";arène calcaire;calcareous arena
+TYPCAI;"338";galets calcaires;calcareous pebble
+TYPCAI;"339";Moraine calcaire;calcareous moraine
+TYPCAI;"381";craie blanche;white chalk
+TYPCAI;"403";calcaire dolomitique;dolomitic limestone
+TYPCAI;"404";dolomie;dolomite
+TYPCAI;"407";calcaire marneux;marly limestone
+TYPCAI;"408";marne;marl
+TYPCAI;"410";calcaire à rognons gréseux;limestone with gritty nodule
+TYPCAI;"500";roche sédimentaire argileuse;clayey sedimentary rock
+TYPCAI;"506";Argile a silex;flint clay
+TYPCAI;"600";roche sédimentaire schisteuse;schist sedimentary rock
+TYPCAI;"604";calcschiste;calcareous schist
+TYPCAI;"712";gypse;gypse
+TYPCAI;"730";famille des roches ferrugineuses;ferruginous rocks family
+TYPCAI;"750";famille des roches carbonées;carbon rocks family
+TYPCAI;"751";Tourbe;peat
+TYPCAI;"800";famille des roches métamorphiques;metamorphic rocks family
+TYPCAI;"810";schiste métamorphique;metamorphic schist
+TYPCAI;"811";gneiss;gneiss
+TYPCAI;"812";micaschiste;micaschist
+TYPCAI;"815";gneiss et micaschiste;gneiss and micaschist
+TYPCAI;"822";serpentine (ou serpentinite);serpentine
+TYPCAI;"832";roche métamorphique et autre roche siliceuse;metamorphic rock and other siliceous rock
+TYPCAI;"833";roche métamorphique et autres roches plutoniques;metamorphic rock and other plutonic rock
+TYPCAI;"834";roche métamorphique et grès siliceux;metamorphic rock and siliceous sandstone
+TYPCAI;"835";roche métamorphique et quartzite;metamorphic rock and quartzite
+TYPCAI;"836";roche métamorphique et silex;metamorphic rock and flint
+TYPCAI;"838";roche métamorphique et galet;metamorphic rock and pebble
+TYPCAI;"900";roche particulière;particular rock
+TYPCAI;"910";terril de mine;mining residues
+TYPCAI;"911";dépôt artificiel;artificial depositions
+TYPCAI;"930";Formation meuble siliceuse et carbonatee;siliceous and carbonated loose deposite
+TYPCAI;"932";calcaire et roche siliceuse;limestone and siliceous rock
+TYPCAI;"936";calcaire et silex;limestone and flint
+TYPCAI;"938";calcaire et galets;limestone and pebble
+TYPCAI;"939";Moraine melangee;mixed moraine
+TYPCAI;"999";Absence ou autre;other or absence
+TYPRIV;"1";source, mare, mardelle;spring, pond, sinkhole
+TYPRIV;"2";étang, lac;pool, lake
+TYPRIV;"3";marais, tourbière, marécage;swamp, peatland, marsh
+TYPRIV;"4";ruisseau, ru;stream, ru
+TYPRIV;"5";rivière;river
+TYPRIV;"6";fleuve;river (flowing to the sea)
+VEGET;"0";arbre vivant sur pied;standing living tree
+VEGET;"5";arbre mort sur pied;standing dead tree
+VEGET;A;arbre chablis;windfallen tree
+VEGET;C;arbre mort sur pied cassé;broken standing dead tree

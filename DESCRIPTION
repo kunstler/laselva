@@ -14,12 +14,13 @@ Encoding: UTF-8
 Language: en-US
 Imports:
     crul,
-    readr,
     rvest,
     xml2,
     hoardr,
     tibble,
+    data.table,
     zip
 Suggests:
-    testthat
+    testthat,
+    vcr
 RoxygenNote: 7.1.0
