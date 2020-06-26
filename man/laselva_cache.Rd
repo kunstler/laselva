@@ -10,10 +10,10 @@ Manage cached files
 \code{cache_delete} only accepts 1 file name, while
 \code{cache_delete_all} doesn't accept any names, but deletes all files.
 For deleting many specific files,
-use \code{cache_delete} in a \code{\link{lapply}} type call
+use \code{cache_delete} in a \code{\link[=lapply]{lapply()}} type call
 
 We cache using \pkg{hoardr} for managing cached files. Find where
-files are being cached with \code{laselva_cache$cache_path_get()}
+files are being cached with \code{laselva_cache$cache_path_get}
 }
 \section{Functions}{
 

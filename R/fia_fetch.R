@@ -4,7 +4,7 @@
 #' @param state (character) one or more states (2 letter code), or the special
 #' "all", for all states
 #' @param what (character) what data to get, one or more values, default: tree
-#' @param ... curl options passed on to [crul::HttpClient]
+#' @param ... curl options passed on to [crul::verb-GET]
 #' @return a tibble (a data.frame)
 #' @examples \dontrun{
 #' # Northern Mariana Islands - trees

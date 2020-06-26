@@ -7,7 +7,7 @@
 list_datasets_usa(...)
 }
 \arguments{
-\item{...}{curl options passed on to \link[crul:HttpClient]{crul::HttpClient}}
+\item{...}{curl options passed on to \link[crul:verb-GET]{crul::verb-GET}}
 }
 \value{
 a list of three data.frames (as tibble's), one for
@@ -20,11 +20,12 @@ List USA Forest Inventory and Analysis (FIA) datasets
 \examples{
 \dontrun{
 x <- list_datasets_usa()
+x
 x$ref_table
 x$by_state
 x$all_states
 }
 }
 \references{
-\url{https://apps.fs.usda.gov/fia/datamart/CSV/datamart_csv.html}
+https://apps.fs.usda.gov/fia/datamart/CSV/datamart_csv.html
 }
