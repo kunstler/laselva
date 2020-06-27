@@ -13,15 +13,15 @@ ls_fetch_aus(...)
 a list of tibbles
 \itemize{
 \item AuxiliaryData.csv: Each record represents presence data for species on
-each plot not recorded as a stem ≥10 cm DBH or understory individuals.
+each plot not recorded as a stem >=10 cm DBH or understory individuals.
 \item TreeMeasurementData.csv: Each record represents the data for one stem for
 a particular year shown in the variable 'year'.
 \item UnderstoryData.csv: Each record represents the data for a species in the
-understory (≥50 cm in height and <10 cm DBH) in a particular plot and
-subplot and the presence or absence in two size classes (≥50 cm in height
+understory (>=50 cm in height and <10 cm DBH) in a particular plot and
+subplot and the presence or absence in two size classes (>=50 cm in height
 to 3 m in height, and >3 m in height to <10 cm DBH).
 \item VoucherData.csv: Each record represents a voucher specimen for a species
-represented either by a stem ≥10 cm DBH, an understory species, or and
+represented either by a stem >=10 cm DBH, an understory species, or and
 auxiliary species.
 }
 

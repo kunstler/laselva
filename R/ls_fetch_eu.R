@@ -10,27 +10,26 @@
 #' - species: data at the species level
 #' 
 #' @section Fields:
-#' - `x`/`y`: coordinates in a ETRS89-LAEA reference coordinate
-#' system, representing the centroid of the INSPIRE-compliant 1 km×1 km
-#' European grid
+#' - `x`/`y`: coordinates in a ETRS89-LAEA reference coordinate system,
+#' representing the centroid of the INSPIRE-compliant 1 kmx1 km European grid
 #' - `country`: the country where the forest plot was sampled
 #' - `genus_name`: the name of the genus sampled
 #' - `species_name`: the name of the species sampled
 #' - `dbh_1`/`dbh_2`: the class for the diameter at breast height of the
 #' trunk, which is used to distinguish a new recruit of a given tree.
 #' This latter measurement has a value of 1 for trunks with a diameter
-#' of less than 120 mm, 2 for trunks with diameter greater than 120 mm,
-#' and −9999 for trunks with unknown diameters. The value of 120 mm
+#' of less than 120 mm, 2 for trunks with diameter greater than 120 mm,
+#' and -9999 for trunks with unknown diameters. The value of 120 mm
 #' represents the common minimum threshold adopted by the nfis,
 #' although single nfis have different minimum thresholds, ranging from
-#' 0 mm in Finland to 120 mm in Cyprus and Switzerland. The choice
+#' 0 mm in Finland to 120 mm in Cyprus and Switzerland. The choice
 #' of threshold has important implications, since estimations of biomass
 #' based on different thresholds can deliver very different results.
 #' - `nfi`: 1 if the data comes from the nfi, -9999 if not
 #' - `ff`: 1 if the data comes from the ff, -9999 if not
 #' - `bs`: 1 if the data comes from the bs, -9999 if not
 #' - `eeo`: whether or not the target occurrence falls within the
-#' species’ geographical range, measured as the extent of occurrence, 
+#' species geographical range, measured as the extent of occurrence, 
 #' 1 for yes, 0 for no
 #' 
 #' Acronyms
