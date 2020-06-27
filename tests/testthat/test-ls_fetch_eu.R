@@ -1,3 +1,5 @@
+skip_on_cran()
+
 # set cache path to a temp dir
 laselva_cache$cache_path_set(full_path = "../files")
 
