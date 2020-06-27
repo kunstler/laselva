@@ -3,3 +3,4 @@
 .RData
 *.Rproj
 notes_data_sources.md
+inst/doc

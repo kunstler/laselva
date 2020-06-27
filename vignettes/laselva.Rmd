@@ -1,0 +1,250 @@
+---
+title: "laselva"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{laselva}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+
+
+Data sources available in `laselva`
+
+- United States Forest Inventory and Analysis (FIA)
+- French IGN Institut National de L'Information Geographique et Forestiere
+- Australian plots [Ecology paper][auspaper], [dataset][ausfig]
+- European plots [Scientific Data paper][eupaper], [dataset][eufig]
+
+
+
+```r
+remotes::install_github("ropenscilabs/laselva")
+```
+
+
+```r
+library(laselva)
+#> Registered S3 method overwritten by 'hoardr':
+#>   method           from
+#>   print.cache_info httr
+```
+
+## USA FIA
+
+First, list datasets available:
+
+
+```r
+x <- ls_list_usa()
+x
+#> $ref_table
+#> # A tibble: 33 x 5
+#>    `ZIP Files`   `CSV Files`  `Number of Reco… `Last Created D… `Last Modified …
+#>    <chr>         <chr>                   <int> <chr>            <chr>           
+#>  1 BEGINEND.zip  BEGINEND.csv                2 2013/09/24       N/A             
+#>  2 LICHEN_SPECI… LICHEN_SPEC…             1818 2012/06/19       N/A             
+#>  3 REF_CITATION… REF_CITATIO…               36 2017/11/02       N/A             
+#>  4 REF_DIFFEREN… REF_DIFFERE…                7 2018/09/21       N/A             
+#>  5 REF_DIFFEREN… REF_DIFFERE…                8 2018/09/21       N/A             
+#>  6 REF_FIADB_VE… REF_FIADB_V…               27 2019/12/13       2019/07/05      
+#>  7 REF_FOREST_T… REF_FOREST_…              207 2014/06/18       2009/01/28      
+#>  8 REF_FOREST_T… REF_FOREST_…               34 2010/04/21       2010/06/17      
+#>  9 REF_GRM_TYPE… REF_GRM_TYP…              142 2017/04/06       2016/11/17      
+#> 10 REF_HABTYP_D… REF_HABTYP_…             8710 2016/03/02       2014/07/17      
+#> # … with 23 more rows
+#> 
+#> $by_state
+#> # A tibble: 3,534 x 5
+#>    `Zip Files`   `CSV Files`  `Number of Reco… `Last Created D… `Last Modified …
+#>    <chr>         <chr>                   <int> <chr>            <chr>           
+#>  1 ""             <NA>                      NA <NA>             <NA>            
+#>  2 "ALABAMA AL.… ""                         NA <NA>             <NA>            
+#>  3 "AL_BOUNDARY… "AL_BOUNDAR…             6860 2019/08/29       2011/11/04      
+#>  4 "AL_COND.zip" "AL_COND.cs…            48019 2019/08/30       2019/09/25      
+#>  5 "AL_COND_DWM… "AL_COND_DW…             2634 2019/09/03       2019/09/03      
+#>  6 "AL_COUNTY.z… "AL_COUNTY.…               67 2002/04/23       2005/03/22      
+#>  7 "AL_DWM_COAR… "AL_DWM_COA…             1455 2019/08/29       2019/08/30      
+#>  8 "AL_DWM_DUFF… "AL_DWM_DUF…             6642 2019/08/29       2017/06/07      
+#>  9 "AL_DWM_FINE… "AL_DWM_FIN…             2447 2019/08/29       2019/08/30      
+#> 10 "AL_DWM_MICR… "AL_DWM_MIC…             1309 2014/12/15       2014/09/22      
+#> # … with 3,524 more rows
+#> 
+#> $all_states
+#> # A tibble: 60 x 5
+#>    `ZIP Files`   `CSV Files`  `Number of Reco… `Last Created D… `Last Modified …
+#>    <chr>         <chr>                   <int> <chr>            <chr>           
+#>  1 BOUNDARY.zip  BOUNDARY.csv           189891 2020/04/20       2017/03/07      
+#>  2 COND.zip      COND.csv              1943802 2020/04/23       2017/03/07      
+#>  3 COND_DWM_CAL… COND_DWM_CA…           718935 2020/04/27       2017/03/07      
+#>  4 COUNTY.zip    COUNTY.csv               3217 2013/01/11       2017/03/07      
+#>  5 DWM_COARSE_W… DWM_COARSE_…           792902 2020/04/20       2017/03/07      
+#>  6 DWM_DUFF_LIT… DWM_DUFF_LI…          1602631 2020/04/20       2017/03/07      
+#>  7 DWM_FINE_WOO… DWM_FINE_WO…           556179 2020/04/20       2017/03/07      
+#>  8 DWM_MICROPLO… DWM_MICROPL…           150888 2019/07/12       2017/03/07      
+#>  9 DWM_RESIDUAL… DWM_RESIDUA…             2968 2020/04/20       2017/03/07      
+#> 10 DWM_TRANSECT… DWM_TRANSEC…          2148260 2020/04/20       2017/03/07      
+#> # … with 50 more rows
+```
+
+Then request a data for a specific state and variable:
+
+
+```r
+# Northern Mariana Islands - trees
+ls_fetch_usa(state = "MP")
+#> MP_tree.zip - found in cache
+#> $MP_tree
+#> # A tibble: 2,208 x 207
+#>    CN    PLT_CN PREV_TRE_CN INVYR STATECD UNITCD COUNTYCD  PLOT  SUBP  TREE
+#>    <int> <int6> <lgl>       <int>   <int>  <int>    <int> <int> <int> <int>
+#>  1 2754… 27348… NA           2004      69      1      100 69026     1   100
+#>  2 2754… 27348… NA           2004      69      1      100 69026     1   101
+#>  3 2754… 27348… NA           2004      69      1      100 69026     1   102
+#>  4 2754… 27348… NA           2004      69      1      100 69026     1   103
+#>  5 2754… 27348… NA           2004      69      1      100 69026     1   104
+#>  6 2754… 27348… NA           2004      69      1      100 69026     1   105
+#>  7 2754… 27348… NA           2004      69      1      100 69026     1   106
+#>  8 2754… 27348… NA           2004      69      1      100 69026     1   107
+#>  9 2754… 27348… NA           2004      69      1      100 69026     1   108
+#> 10 2754… 27348… NA           2004      69      1      100 69026     1   109
+#> # … with 2,198 more rows, and 197 more variables: CONDID <int>, AZIMUTH <int>,
+#> #   DIST <dbl>, PREVCOND <lgl>, STATUSCD <int>, SPCD <int>, SPGRPCD <int>,
+#> #   DIA <dbl>, DIAHTCD <int>, HT <int>, HTCD <int>, ACTUALHT <int>,
+#> #   TREECLCD <int>, CR <int>, CCLCD <int>, TREEGRCD <lgl>, AGENTCD <lgl>,
+#> #   CULL <int>, DAMLOC1 <int>, DAMTYP1 <int>, DAMSEV1 <int>, DAMLOC2 <int>,
+#> #   DAMTYP2 <int>, DAMSEV2 <int>, DECAYCD <int>, STOCKING <dbl>,
+#> #   WDLDSTEM <lgl>, VOLCFNET <dbl>, VOLCFGRS <dbl>, VOLCSNET <dbl>,
+#> #   VOLCSGRS <dbl>, VOLBFNET <dbl>, VOLBFGRS <dbl>, VOLCFSND <dbl>,
+#> #   GROWCFGS <lgl>, GROWBFSL <lgl>, GROWCFAL <lgl>, MORTCFGS <lgl>,
+#> #   MORTBFSL <lgl>, MORTCFAL <lgl>, REMVCFGS <lgl>, REMVBFSL <lgl>,
+#> #   REMVCFAL <lgl>, DIACHECK <int>, MORTYR <lgl>, SALVCD <lgl>, UNCRCD <int>,
+#> #   CPOSCD <lgl>, CLIGHTCD <lgl>, CVIGORCD <lgl>, CDENCD <lgl>, CDIEBKCD <lgl>,
+#> #   TRANSCD <lgl>, TREEHISTCD <lgl>, DIACALC <dbl>, BHAGE <lgl>, TOTAGE <lgl>,
+#> #   CULLDEAD <lgl>, CULLFORM <lgl>, CULLMSTOP <lgl>, CULLBF <lgl>,
+#> #   CULLCF <lgl>, BFSND <lgl>, CFSND <lgl>, SAWHT <lgl>, BOLEHT <lgl>,
+#> #   FORMCL <lgl>, HTCALC <int>, HRDWD_CLUMP_CD <int>, SITREE <lgl>,
+#> #   CREATED_BY <lgl>, CREATED_DATE <chr>, CREATED_IN_INSTANCE <int>,
+#> #   MODIFIED_BY <lgl>, MODIFIED_DATE <chr>, MODIFIED_IN_INSTANCE <int>,
+#> #   MORTCD <lgl>, HTDMP <dbl>, ROUGHCULL <lgl>, MIST_CL_CD <lgl>,
+#> #   CULL_FLD <int>, RECONCILECD <lgl>, PREVDIA <lgl>, FGROWCFGS <lgl>,
+#> #   FGROWBFSL <lgl>, FGROWCFAL <lgl>, FMORTCFGS <lgl>, FMORTBFSL <lgl>,
+#> #   FMORTCFAL <lgl>, FREMVCFGS <lgl>, FREMVBFSL <lgl>, FREMVCFAL <lgl>,
+#> #   P2A_GRM_FLG <chr>, TREECLCD_NERS <lgl>, TREECLCD_SRS <lgl>,
+#> #   TREECLCD_NCRS <lgl>, TREECLCD_RMRS <lgl>, STANDING_DEAD_CD <int>,
+#> #   PREV_STATUS_CD <lgl>, PREV_WDLDSTEM <lgl>, …
+# Guam - seedling
+ls_fetch_usa(state = "GU", what = "seedling")
+#> GU_seedling.zip - found in cache
+#> $GU_seedling
+#> # A tibble: 362 x 32
+#>    CN    PLT_CN INVYR STATECD UNITCD COUNTYCD  PLOT  SUBP CONDID  SPCD SPGRPCD
+#>    <int> <int6> <int>   <int>  <int>    <int> <int> <int>  <int> <int>   <int>
+#>  1 2140… 19651…  2002      66      1       10 66007     1      1  6042      54
+#>  2 2140… 19651…  2002      66      1       10 66007     1      1  7282      54
+#>  3 2513… 19651…  2002      66      1       10 66007     1      1  7987      54
+#>  4 2140… 19651…  2002      66      1       10 66007     2      1  6042      54
+#>  5 2513… 19651…  2002      66      1       10 66007     2      1  7987      54
+#>  6 2140… 19651…  2002      66      1       10 66007     3      1  6042      54
+#>  7 2140… 19651…  2002      66      1       10 66007     3      1  7091      54
+#>  8 2140… 19651…  2002      66      1       10 66007     3      1  7282      54
+#>  9 2140… 19651…  2002      66      1       10 66007     4      1  6042      54
+#> 10 2513… 19651…  2002      66      1       10 66007     4      1  7987      54
+#> # … with 352 more rows, and 21 more variables: STOCKING <dbl>, TREECOUNT <int>,
+#> #   TOTAGE <lgl>, CREATED_BY <lgl>, CREATED_DATE <chr>,
+#> #   CREATED_IN_INSTANCE <int>, MODIFIED_BY <lgl>, MODIFIED_DATE <chr>,
+#> #   MODIFIED_IN_INSTANCE <int>, TREECOUNT_CALC <int>, TPA_UNADJ <dbl>,
+#> #   CYCLE <int>, SUBCYCLE <int>, DAMAGE_AGENT_CD1_SRS <lgl>,
+#> #   PCT_AFFECTED_DAMAGE_AGENT1_SRS <lgl>, DAMAGE_AGENT_CD2_SRS <lgl>,
+#> #   PCT_AFFECTED_DAMAGE_AGENT2_SRS <lgl>, DAMAGE_AGENT_CD3_SRS <lgl>,
+#> #   PCT_AFFECTED_DAMAGE_AGENT3_SRS <lgl>, AGECD_RMRS <lgl>,
+#> #   COUNTCHKCD_RMRS <lgl>
+```
+
+## Australia
+
+Queensland, Australian data
+
+
+```r
+x <- ls_fetch_aus()
+#> 1 - found in cache
+names(x)
+#> [1] "AuxiliaryData.csv"       "TreeMeasurementData.csv"
+#> [3] "UnderstoryData.csv"      "VoucherData.csv"
+x[[1]]
+#> # A tibble: 560 x 8
+#>    epNumber family genus taxon taxonAuth ALA_APNI_TAXON_… ALA_APNI_TAXON_…
+#>    <chr>    <chr>  <chr> <chr> <chr>     <chr>            <chr>           
+#>  1 EP2      Annon… Melo… Melo… Melodoru… urn:lsid:biodiv… http://biodiver…
+#>  2 EP2      Apocy… Melo… Melo… Melodinu… urn:lsid:biodiv… http://biodiver…
+#>  3 EP2      Apocy… Pars… Pars… Parsonsi… urn:lsid:biodiv… http://biodiver…
+#>  4 EP2      Asple… Aspl… Aspl… Aspleniu… urn:lsid:biodiv… http://biodiver…
+#>  5 EP2      Celas… Hipp… Hipp… Hippocra… urn:lsid:biodiv… http://biodiver…
+#>  6 EP2      Cyper… Gahn… Gahn… Gahnia a… urn:lsid:biodiv… http://biodiver…
+#>  7 EP2      Dryop… Cove… Cove… Coveniel… urn:lsid:biodiv… http://biodiver…
+#>  8 EP2      Dryop… Last… Last… Lastreop… urn:lsid:biodiv… http://biodiver…
+#>  9 EP2      Fabac… Aust… Aust… Austrost… urn:lsid:biodiv… http://biodiver…
+#> 10 EP2      Hemer… Dian… Dian… Dianella… urn:lsid:biodiv… http://biodiver…
+#> # … with 550 more rows, and 1 more variable: classification <chr>
+```
+
+## Europe
+
+Tree inventory data for 21 countries in Europe
+
+
+```r
+res <- ls_fetch_eu()
+#> 6864174 - found in cache
+#> 6662535 - found in cache
+names(res)
+#> [1] "genus"   "species"
+res$genus
+#> # A tibble: 589,657 x 4
+#>          x       y country genus_name
+#>      <int>   <int> <chr>   <chr>     
+#>  1 4609500 2822500 Austria Abies     
+#>  2 4585500 2692500 Austria Abies     
+#>  3 4662500 2816500 Austria Abies     
+#>  4 4787500 2729500 Austria Abies     
+#>  5 4687500 2735500 Austria Abies     
+#>  6 4572500 2741500 Austria Abies     
+#>  7 4794500 2759500 Austria Abies     
+#>  8 4589500 2725500 Austria Abies     
+#>  9 4417500 2687500 Austria Abies     
+#> 10 4742000 2702000 Austria Abies     
+#> # … with 589,647 more rows
+```
+
+## France
+
+Tree inventory data for 21 countries in Europe
+
+
+```r
+res <- ls_fetch_fr(year = 2017)
+#> 2017-en.zip - found in cache
+names(res)
+#>  [1] "cover_forest_2017.csv"      "dead_trees_forest_2017.csv"
+#>  [3] "dead_trees_poplar_2017.csv" "documentation_2017.csv"    
+#>  [5] "documentation_flora.csv"    "ecology_2017.csv"          
+#>  [7] "flora_2017.csv"             "plots_forest_2017.csv"     
+#>  [9] "plots_poplar_2017.csv"      "trees_forest_2017.csv"     
+#> [11] "trees_poplar_2017.csv"
+res[[1]]
+#> # A tibble: 27,381 x 4
+#>        idp espar   tca   tcl
+#>      <int> <chr> <int> <int>
+#>  1 1200006 02       10    10
+#>  2 1200006 10        0     0
+#>  3 1200006 17C      70    60
+#>  4 1200006 21C       0     0
+#>  5 1200006 22M       0     0
+#>  6 1200006 24       30    30
+#>  7 1200008 02       40    40
+#>  8 1200008 09        0     0
+#>  9 1200008 11       70    60
+#> 10 1200014 02      100   100
+#> # … with 27,371 more rows
+```

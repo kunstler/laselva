@@ -1,0 +1,79 @@
+---
+title: "laselva"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{laselva}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+Data sources available in `laselva`
+
+- United States Forest Inventory and Analysis (FIA)
+- French IGN Institut National de L'Information Geographique et Forestiere
+- Australian plots [Ecology paper][auspaper], [dataset][ausfig]
+- European plots [Scientific Data paper][eupaper], [dataset][eufig]
+
+
+```{r eval=FALSE}
+remotes::install_github("ropenscilabs/laselva")
+```
+
+```{r setup}
+library(laselva)
+```
+
+## USA FIA
+
+First, list datasets available:
+
+```{r fia-list}
+x <- ls_list_usa()
+x
+```
+
+Then request a data for a specific state and variable:
+
+```{r fia-fetch}
+# Northern Mariana Islands - trees
+ls_fetch_usa(state = "MP")
+# Guam - seedling
+ls_fetch_usa(state = "GU", what = "seedling")
+```
+
+## Australia
+
+Queensland, Australian data
+
+```{r aus}
+x <- ls_fetch_aus()
+names(x)
+x[[1]]
+```
+
+## Europe
+
+Tree inventory data for 21 countries in Europe
+
+```{r eu}
+res <- ls_fetch_eu()
+names(res)
+res$genus
+```
+
+## France
+
+Tree inventory data for 21 countries in Europe
+
+```{r fr}
+res <- ls_fetch_fr(year = 2017)
+names(res)
+res[[1]]
+```
