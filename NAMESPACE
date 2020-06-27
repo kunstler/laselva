@@ -2,6 +2,7 @@
 
 export(laselva_cache)
 export(ls_fetch_aus)
+export(ls_fetch_eu)
 export(ls_fetch_fr)
 export(ls_fetch_fr_revisit)
 export(ls_fetch_usa)
