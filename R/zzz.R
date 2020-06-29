@@ -19,8 +19,8 @@ un_zip <- function(x) {
   return(list.files(z, pattern = ".csv", full.names = TRUE))
 }
 
-just_un_zip <- function(x) {
-  exdir <- sub("\\.zip", "", x)
+just_un_zip <- function(x, exdir = NULL) {
+  if (is.null(exdir)) exdir <- sub("\\.zip", "", x)
   utils::unzip(x, exdir = exdir, junkpaths = TRUE)
   return(exdir)
 }
@@ -39,3 +39,11 @@ f_read <- function(x, sep = "auto") {
 }
 
 strct <- function(str, pattern) regmatches(str, regexpr(pattern, str))
+
+check_for_a_pkg <- function(x) {
+  if (!requireNamespace(x, quietly = TRUE)) {
+    stop("Please install ", x, call. = FALSE)
+  } else {
+    invisible(TRUE)
+  }
+}

@@ -2,7 +2,7 @@ Package: laselva
 Type: Package
 Title: Access to Global Forest Inventory Data
 Description: Fetch forest inventory data from across the globe.
-Version: 0.0.7.91
+Version: 0.0.7.93
 Authors@R: c(person("Scott", "Chamberlain", role = c("aut", "cre"),
     email = "myrmecocystus@gmail.com"))
 License: MIT + file LICENSE
@@ -23,6 +23,7 @@ Suggests:
     testthat,
     vcr,
     knitr,
-    rmarkdown
+    rmarkdown,
+    sys
 RoxygenNote: 7.1.0
 VignetteBuilder: knitr

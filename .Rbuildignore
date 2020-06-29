@@ -10,3 +10,4 @@ README.Rmd
 ^Makefile$
 ^.github$
 ^notes_data_sources.md$
+notes.R
