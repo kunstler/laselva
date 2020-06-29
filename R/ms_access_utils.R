@@ -19,6 +19,9 @@
 #' extract_ma(file)
 #' }
 extract_ma <- function(file) {
+  os <- tolower(Sys.info()["sysname"])
+  if (os == "windows")
+    stop("required tool mdbtools is not available for Windows")
   check_for_a_pkg("sys")
   mdbtab <- Sys.which("mdb-tables")
   if (!nzchar(mdbtab[[1]]))
