@@ -11,10 +11,12 @@ vignette: >
 
 Data sources available in `laselva`
 
-- United States Forest Inventory and Analysis (FIA)
 - French IGN Institut National de L'Information Geographique et Forestiere
-- Australian plots [Ecology paper][auspaper], [dataset][ausfig]
+- [Spain][esp]
 - European plots [Scientific Data paper][eupaper], [dataset][eufig]
+- Australian plots [Ecology paper][auspaper], [dataset][ausfig]
+- United States Forest Inventory and Analysis (FIA)
+- Japan Ministry of the Environment, Monitoring Sites 1000 Project, [description][jpn]
 
 
 
@@ -25,9 +27,6 @@ remotes::install_github("ropenscilabs/laselva")
 
 ```r
 library(laselva)
-#> Registered S3 method overwritten by 'hoardr':
-#>   method           from
-#>   print.cache_info httr
 ```
 
 ## USA FIA
@@ -38,53 +37,6 @@ First, list datasets available:
 ```r
 x <- ls_list_usa()
 x
-#> $ref_table
-#> # A tibble: 33 x 5
-#>    `ZIP Files`   `CSV Files`  `Number of Reco… `Last Created D… `Last Modified …
-#>    <chr>         <chr>                   <int> <chr>            <chr>           
-#>  1 BEGINEND.zip  BEGINEND.csv                2 2013/09/24       N/A             
-#>  2 LICHEN_SPECI… LICHEN_SPEC…             1818 2012/06/19       N/A             
-#>  3 REF_CITATION… REF_CITATIO…               36 2017/11/02       N/A             
-#>  4 REF_DIFFEREN… REF_DIFFERE…                7 2018/09/21       N/A             
-#>  5 REF_DIFFEREN… REF_DIFFERE…                8 2018/09/21       N/A             
-#>  6 REF_FIADB_VE… REF_FIADB_V…               27 2019/12/13       2019/07/05      
-#>  7 REF_FOREST_T… REF_FOREST_…              207 2014/06/18       2009/01/28      
-#>  8 REF_FOREST_T… REF_FOREST_…               34 2010/04/21       2010/06/17      
-#>  9 REF_GRM_TYPE… REF_GRM_TYP…              142 2017/04/06       2016/11/17      
-#> 10 REF_HABTYP_D… REF_HABTYP_…             8710 2016/03/02       2014/07/17      
-#> # … with 23 more rows
-#> 
-#> $by_state
-#> # A tibble: 3,534 x 5
-#>    `Zip Files`   `CSV Files`  `Number of Reco… `Last Created D… `Last Modified …
-#>    <chr>         <chr>                   <int> <chr>            <chr>           
-#>  1 ""             <NA>                      NA <NA>             <NA>            
-#>  2 "ALABAMA AL.… ""                         NA <NA>             <NA>            
-#>  3 "AL_BOUNDARY… "AL_BOUNDAR…             6860 2019/08/29       2011/11/04      
-#>  4 "AL_COND.zip" "AL_COND.cs…            48019 2019/08/30       2019/09/25      
-#>  5 "AL_COND_DWM… "AL_COND_DW…             2634 2019/09/03       2019/09/03      
-#>  6 "AL_COUNTY.z… "AL_COUNTY.…               67 2002/04/23       2005/03/22      
-#>  7 "AL_DWM_COAR… "AL_DWM_COA…             1455 2019/08/29       2019/08/30      
-#>  8 "AL_DWM_DUFF… "AL_DWM_DUF…             6642 2019/08/29       2017/06/07      
-#>  9 "AL_DWM_FINE… "AL_DWM_FIN…             2447 2019/08/29       2019/08/30      
-#> 10 "AL_DWM_MICR… "AL_DWM_MIC…             1309 2014/12/15       2014/09/22      
-#> # … with 3,524 more rows
-#> 
-#> $all_states
-#> # A tibble: 60 x 5
-#>    `ZIP Files`   `CSV Files`  `Number of Reco… `Last Created D… `Last Modified …
-#>    <chr>         <chr>                   <int> <chr>            <chr>           
-#>  1 BOUNDARY.zip  BOUNDARY.csv           189891 2020/04/20       2017/03/07      
-#>  2 COND.zip      COND.csv              1943802 2020/04/23       2017/03/07      
-#>  3 COND_DWM_CAL… COND_DWM_CA…           718935 2020/04/27       2017/03/07      
-#>  4 COUNTY.zip    COUNTY.csv               3217 2013/01/11       2017/03/07      
-#>  5 DWM_COARSE_W… DWM_COARSE_…           792902 2020/04/20       2017/03/07      
-#>  6 DWM_DUFF_LIT… DWM_DUFF_LI…          1602631 2020/04/20       2017/03/07      
-#>  7 DWM_FINE_WOO… DWM_FINE_WO…           556179 2020/04/20       2017/03/07      
-#>  8 DWM_MICROPLO… DWM_MICROPL…           150888 2019/07/12       2017/03/07      
-#>  9 DWM_RESIDUAL… DWM_RESIDUA…             2968 2020/04/20       2017/03/07      
-#> 10 DWM_TRANSECT… DWM_TRANSEC…          2148260 2020/04/20       2017/03/07      
-#> # … with 50 more rows
 ```
 
 Then request a data for a specific state and variable:
@@ -93,7 +45,6 @@ Then request a data for a specific state and variable:
 ```r
 # Northern Mariana Islands - trees
 ls_fetch_usa(state = "MP")
-#> MP_tree.zip - found in cache
 #> $MP_tree
 #> # A tibble: 2,208 x 207
 #>    CN    PLT_CN PREV_TRE_CN INVYR STATECD UNITCD COUNTYCD  PLOT  SUBP  TREE
@@ -135,7 +86,6 @@ ls_fetch_usa(state = "MP")
 #> #   PREV_STATUS_CD <lgl>, PREV_WDLDSTEM <lgl>, …
 # Guam - seedling
 ls_fetch_usa(state = "GU", what = "seedling")
-#> GU_seedling.zip - found in cache
 #> $GU_seedling
 #> # A tibble: 362 x 32
 #>    CN    PLT_CN INVYR STATECD UNITCD COUNTYCD  PLOT  SUBP CONDID  SPCD SPGRPCD
@@ -168,7 +118,6 @@ Queensland, Australian data
 
 ```r
 x <- ls_fetch_aus()
-#> 1 - found in cache
 names(x)
 #> [1] "AuxiliaryData.csv"       "TreeMeasurementData.csv"
 #> [3] "UnderstoryData.csv"      "VoucherData.csv"
@@ -196,8 +145,6 @@ Tree inventory data for 21 countries in Europe
 
 ```r
 res <- ls_fetch_eu()
-#> 6864174 - found in cache
-#> 6662535 - found in cache
 names(res)
 #> [1] "genus"   "species"
 res$genus
@@ -223,8 +170,7 @@ Tree inventory data for 21 countries in Europe
 
 
 ```r
-res <- ls_fetch_fr(year = 2017)
-#> 2017-en.zip - found in cache
+res <- ls_fetch_fra(year = 2017)
 names(res)
 #>  [1] "cover_forest_2017.csv"      "dead_trees_forest_2017.csv"
 #>  [3] "dead_trees_poplar_2017.csv" "documentation_2017.csv"    
@@ -248,3 +194,90 @@ res[[1]]
 #> 10 1200014 02      100   100
 #> # … with 27,371 more rows
 ```
+
+## Spain
+
+Tree inventory data for 17 regions in Spain
+
+
+```r
+res = ls_fetch_esp(location = "alava")
+names(res)
+#> [1] "sig_01_tcm36_293906"  "ifn3p01_tcm36_293907"
+res$sig_01_tcm36_293906$Mayores_exs
+#> # A tibble: 27,687 x 27
+#>    Estadillo Cla   Subclase nArbol OrdenIf3 OrdenIf2 Rumbo Distanci Especie
+#>        <int> <chr> <chr>     <int>    <int>    <int> <int>    <dbl>   <int>
+#>  1         2 A     4C            1        1        0     4     3.30      28
+#>  2         2 A     4C            2        2        0     7     8.90      28
+#>  3         2 A     4C            3        3        0    34     6.60      28
+#>  4         2 A     4C            4        4        0    43     4.5       28
+#>  5         2 A     4C            5        5        0    52     8.5       28
+#>  6         2 A     4C            6        6        0    63     6.30      28
+#>  7         2 A     4C            7        7        0    76     8.30      28
+#>  8         2 A     4C            8        8        0    81     1.60      28
+#>  9         2 A     4C            9        9        0    96     7.70      28
+#> 10         2 A     4C           10       10        0    96     4.5       28
+#> # … with 27,677 more rows, and 18 more variables: EspecieOriginal <int>,
+#> #   Dn1 <int>, Dn2 <int>, Ht <dbl>, Calidad <int>, Forma <int>, ParEsp <int>,
+#> #   Agente <int>, Import <int>, Elemento <int>, Estrato <int>, CD <int>,
+#> #   G <dbl>, VCC <dbl>, VSC <dbl>, IAVC <dbl>, VLE <dbl>, Fac <int>
+```
+
+## Japan
+
+Tree inventory data for Japan
+
+
+```r
+res = ls_fetch_jpn()
+names(res)
+#> [1] "species_list" "site_list"    "tree_data"    "metadata"
+res$species_list
+#> # A tibble: 365 x 6
+#>    SpJapan    Name           NameAuth                 Family    Synonym FuncType
+#>    <chr>      <chr>          <chr>                    <chr>       <int>    <int>
+#>  1 maruhati   Cyathea merte… Cyathea mertensiana (Ku… Cyatheac…       1        3
+#>  2 inugaya    Cephalotaxus … Cephalotaxus harrington… Cephalot…       1        1
+#>  3 hinoki     Chamaecyparis… Chamaecyparis obtusa (S… Cupressa…       1        1
+#>  4 sugi       Cryptomeria j… Cryptomeria japonica (L… Cupressa…       1        1
+#>  5 nezumisasi Juniperus rig… Juniperus rigida Sieb. … Cupressa…       1        1
+#>  6 hinokiasu… Thujopsis dol… Thujopsis dolabrata Sie… Cupressa…       1        1
+#>  7 hiba       Thujopsis dol… Thujopsis dolabrata Sie… Cupressa…       0        1
+#>  8 momi       Abies firma    Abies firma Sieb. et Zu… Pinaceae        1        1
+#>  9 uraziromo… Abies homolep… Abies homolepis Sieb. e… Pinaceae        1        1
+#> 10 oosirabiso Abies mariesii Abies mariesii Masters   Pinaceae        1        1
+#> # … with 355 more rows
+res$tree_data$AI_BC1
+#> # A tibble: 2,322 x 38
+#>    grid_xcord grid_ycord tag_no indv_no stem_xcord stem_ycord sp_jpn sp   
+#>         <int>      <int> <chr>  <chr>        <dbl>      <dbl> <chr>  <chr>
+#>  1          0          0 B770   B770           2.6        5.2 aohada Ilex…
+#>  2          0          0 B774   B774           3.4        9   aohada Ilex…
+#>  3          0          0 B772   B772           3.4        8   akama… Pinu…
+#>  4          0          0 B775   B775           2.2        3.7 akama… Pinu…
+#>  5          0          0 B786   B786           7.8        5.9 asebi  Pier…
+#>  6          0          0 B792   B792           6.7        9.3 konara Quer…
+#>  7          0          0 B800   B800           9.4        5   konara Quer…
+#>  8          0          0 B785   B785           7.5        4.9 konara Quer…
+#>  9          0          0 B780   B780           2.4        1.6 konara Quer…
+#> 10          0          0 B765   B765           0.7        9   konara Quer…
+#> # … with 2,312 more rows, and 30 more variables: gbh2004 <dbl>, gbh2005 <dbl>,
+#> #   gbh2006 <dbl>, gbh2007 <dbl>, gbh2008 <dbl>, gbh2009 <dbl>, dl2004 <int>,
+#> #   dl2005 <int>, dl2006 <int>, dl2007 <int>, dl2008 <int>, dl2009 <int>,
+#> #   rec2004 <int>, rec2005 <int>, rec2006 <int>, rec2007 <int>, rec2008 <int>,
+#> #   rec2009 <int>, error2004 <int>, error2005 <int>, error2006 <int>,
+#> #   error2007 <int>, error2008 <int>, error2009 <int>, s_date2004 <int>,
+#> #   s_date2005 <int>, s_date2006 <int>, s_date2007 <int>, s_date2008 <int>,
+#> #   s_date2009 <int>
+```
+
+
+[coc]: https://github.com/ropenscilabs/laselva/blob/master/.github/CODE_OF_CONDUCT.md
+[auspaper]: https://doi.org/10.1890/14-0458R.1
+[ausfig]: https://figshare.com/collections/Long-term_stem_inventory_data_from_tropical_rain_forest_plots_in_Australia/3307029
+[eupaper]: https://doi.org/10.1038/sdata.2016.123
+[eufig]: https://doi.org/10.6084/m9.figshare.c.3288407.v1
+[esp]: https://www.miteco.gob.es/fr/biodiversidad/servicios/banco-datos-naturaleza/informacion-disponible/ifn3_base_datos_1_25.aspx
+[jpn]: http://db.cger.nies.go.jp/JaLTER/ER_DataPapers/archives/2011/ERDP-2011-01/metadata
+
