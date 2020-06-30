@@ -6,7 +6,9 @@
 #' @param ... curl options passed on to [crul::verb-GET]
 #' @references
 #' http://db.cger.nies.go.jp/JaLTER/ER_DataPapers/archives/2011/ERDP-2011-01/metadata
-#' @return a list of tibbles
+#' @return a list of data and metadata
+#' @note The `emld` R package is required for EML metadata access. If you
+#' don't have it installed we'll just return an empty list
 #' @examples \dontrun{
 #' res = ls_fetch_jpn()
 #' res

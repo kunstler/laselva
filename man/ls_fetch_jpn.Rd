@@ -10,10 +10,14 @@ ls_fetch_jpn(...)
 \item{...}{curl options passed on to \link[crul:verb-GET]{crul::verb-GET}}
 }
 \value{
-a list of tibbles
+a list of data and metadata
 }
 \description{
 Japan Ministry of the Environment, Monitoring Sites 1000 Project
+}
+\note{
+The \code{emld} R package is required for EML metadata access. If you
+don't have it installed we'll just return an empty list
 }
 \examples{
 \dontrun{
