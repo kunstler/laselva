@@ -3,7 +3,7 @@ laselva
 
 
 
-[![Build Status](https://travis-ci.org/ropenscilabs/laselva.svg?branch=master)](https://travis-ci.org/ropenscilabs/laselva)
+[![R-check](https://github.com/ropenscilabs/laselva/workflows/R-check/badge.svg)](https://github.com/ropenscilabs/laselva/actions)
 [![codecov](https://codecov.io/gh/ropenscilabs/laselva/branch/master/graph/badge.svg)](https://codecov.io/gh/ropenscilabs/laselva)
 
 Access to Global Forest Inventory Data
