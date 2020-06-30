@@ -1,4 +1,5 @@
 skip_on_cran()
+skip_on_ci() # skipping temporarily, FIA down apparently
 
 # set cache path to a temp dir
 laselva_cache$cache_path_set(full_path = "../files")

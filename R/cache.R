@@ -1,7 +1,7 @@
 handle_errors <- function(x, path) {
   if (x$status_code > 201) {
     unlink(path, recursive = TRUE, force = TRUE)
-    x$raise_for_status(x)
+    x$raise_for_status()
   }
 }
 
