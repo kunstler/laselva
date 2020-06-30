@@ -6,8 +6,8 @@
 #' @export
 #' @param year (integer/numeric) data year to get. possible years: 2005-2018
 #' @param ... curl options passed on to [crul::verb-GET]
-#' @details `ls_fetch_fr()` gets the given years data, while
-#' `ls_fetch_fr_revisit()` gets revisit data for 5 years after the supplied
+#' @details `ls_fetch_fra()` gets the given years data, while
+#' `ls_fetch_fra_revisit()` gets revisit data for 5 years after the supplied
 #' year
 #' @references https://inventaire-forestier.ign.fr/
 #' @return a list of tibbles
@@ -38,17 +38,17 @@
 #' - trees_poplar_year.csv
 #'  
 #' @examples \dontrun{
-#' res = ls_fetch_fr(year = 2017)
+#' res = ls_fetch_fra(year = 2017)
 #' res
-#' ls_fetch_fr(year = 2007)
+#' ls_fetch_fra(year = 2007)
 #' 
 #' # revisit data
-#' ls_fetch_fr_revisit(year = 2007)
+#' ls_fetch_fra_revisit(year = 2007)
 #' }
-ls_fetch_fr <- function(year, ...) {
+ls_fetch_fra <- function(year, ...) {
   assert(year, c("numeric", "integer"))
   stopifnot(year <= 2018, year >= 2005)
-  url <- file.path(fr_base(), sprintf("%s-en.zip", year))
+  url <- file.path(fra_base(), sprintf("%s-en.zip", year))
   xx <- cache_GET(url, "france-ign", ...)
   csv_files <- suppressMessages(un_zip(xx))
   bb <- suppressMessages(lapply(csv_files, f_read, sep = ";"))
@@ -56,15 +56,15 @@ ls_fetch_fr <- function(year, ...) {
 }
 
 #' @export
-#' @rdname ls_fetch_fr 
-ls_fetch_fr_revisit <- function(year, ...) {
+#' @rdname ls_fetch_fra 
+ls_fetch_fra_revisit <- function(year, ...) {
   assert(year, c("numeric", "integer"))
   stopifnot(year <= 2018, year >= 2005)
-  url <- file.path(fr_base(), sprintf("%s-%s-en.zip", year, year + 5))
+  url <- file.path(fra_base(), sprintf("%s-%s-en.zip", year, year + 5))
   xx <- cache_GET(url, "france-ign", ...)
   csv_files <- suppressMessages(un_zip(xx))
   bb <- suppressMessages(lapply(csv_files, f_read, sep = ";"))
   stats::setNames(bb, basename(csv_files))
 }
 
-fr_base <- function() "https://inventaire-forestier.ign.fr/IMG/zip"
+fra_base <- function() "https://inventaire-forestier.ign.fr/IMG/zip"
