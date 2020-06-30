@@ -1,4 +1,5 @@
 skip_on_cran()
+skip_on_ci() # skip on ci for now, service is down
 
 # set cache path to a temp dir
 laselva_cache$cache_path_set(full_path = "../files")
