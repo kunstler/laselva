@@ -6,7 +6,13 @@
 #' @param ... curl options passed on to [crul::verb-GET]
 #' @references
 #' http://db.cger.nies.go.jp/JaLTER/ER_DataPapers/archives/2011/ERDP-2011-01/metadata
-#' @return a list of data and metadata
+#' @return a list of data and metadata:
+#' - species_list: a data.frame with species information
+#' - site_list: a data.frame with site information
+#' - tree_data: a list of data.frame's named by their sites, which match the 
+#' column `PlotID` in the `site_list` data.frame (except `-` is swapped with
+#' `_` for easier indexing)
+#' - metadata: an object of class `emld` containing metadata for the data
 #' @note The `emld` R package is required for EML metadata access. If you
 #' don't have it installed we'll just return an empty list
 #' @examples \dontrun{
@@ -27,7 +33,7 @@ ls_fetch_jpn <- function(...) {
   trees_dir <- just_un_zip(trees)
   csv_files <- list.files(trees_dir, pattern = ".csv", full.names = TRUE)
   bb <- suppressMessages(lapply(csv_files, f_read, sep = ","))
-  nms <- gsub("-", "_", strct(basename(csv_files), "[A-Za-z]+-[A-Za-z]+"))
+  nms <- gsub("-", "_", strct(basename(csv_files), "[A-Za-z]+-[A-Za-z0-9]+"))
   tree_data <- stats::setNames(bb, nms)
 
   # EML metadata

@@ -10,7 +10,15 @@ ls_fetch_jpn(...)
 \item{...}{curl options passed on to \link[crul:verb-GET]{crul::verb-GET}}
 }
 \value{
-a list of data and metadata
+a list of data and metadata:
+\itemize{
+\item species_list: a data.frame with species information
+\item site_list: a data.frame with site information
+\item tree_data: a list of data.frame's named by their sites, which match the
+column \code{PlotID} in the \code{site_list} data.frame (except \code{-} is swapped with
+\verb{_} for easier indexing)
+\item metadata: an object of class \code{emld} containing metadata for the data
+}
 }
 \description{
 Japan Ministry of the Environment, Monitoring Sites 1000 Project
