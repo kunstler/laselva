@@ -40,9 +40,9 @@ f_read <- function(x, sep = "auto") {
 
 strct <- function(str, pattern) regmatches(str, regexpr(pattern, str))
 
-check_for_a_pkg <- function(x) {
+check_for_a_pkg <- function(x, condition = stop) {
   if (!requireNamespace(x, quietly = TRUE)) {
-    stop("Please install ", x, call. = FALSE)
+    condition("Please install ", x, call. = FALSE)
   } else {
     invisible(TRUE)
   }
