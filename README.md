@@ -23,7 +23,7 @@ Please cite `laselva` if you use it in a paper: `citation(package = 'laselva')`
 
 ## System Dependencies
 
-If you want to get Spanish data, you'll need a system dependency called mdbtools. mdbtools is not required for any other functions. Installation for major platforms:
+If you want to get Spanish data, you'll need a system dependency called [mdbtools][]. mdbtools is not required for any other functions. Installation for major platforms:
 
 - macos: `brew install mdbtools`
 - deb: `apt-get install mdbtools`
@@ -62,3 +62,4 @@ By participating in this project you agree to abide by its terms.
 [eufig]: https://doi.org/10.6084/m9.figshare.c.3288407.v1
 [esp]: https://www.miteco.gob.es/fr/biodiversidad/servicios/banco-datos-naturaleza/informacion-disponible/ifn3_base_datos_1_25.aspx
 [jpn]: http://db.cger.nies.go.jp/JaLTER/ER_DataPapers/archives/2011/ERDP-2011-01/metadata
+[mdbtools]: https://github.com/brianb/mdbtools
