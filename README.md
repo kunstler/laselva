@@ -3,12 +3,10 @@ laselva
 
 
 
-[![R-check](https://github.com/ropenscilabs/laselva/workflows/R-check/badge.svg)](https://github.com/ropenscilabs/laselva/actions)
-[![codecov](https://codecov.io/gh/ropenscilabs/laselva/branch/master/graph/badge.svg)](https://codecov.io/gh/ropenscilabs/laselva)
+[![R-check](https://github.com/sckott/laselva/workflows/R-check/badge.svg)](https://github.com/sckott/laselva/actions)
+[![codecov](https://codecov.io/gh/sckott/laselva/branch/master/graph/badge.svg)](https://codecov.io/gh/sckott/laselva)
 
 Access to Global Forest Inventory Data
-
-Docs: https://docs.ropensci.org/laselva/
 
 Please cite `laselva` if you use it in a paper: `citation(package = 'laselva')`
 
@@ -34,7 +32,7 @@ If you want to get Spanish data, you'll need a system dependency called [mdbtool
 
 
 ```r
-remotes::install_github("ropenscilabs/laselva")
+remotes::install_github("sckott/laselva")
 ```
 
 
@@ -47,15 +45,13 @@ installed we'll just return an empty list
 
 ## Meta
 
-* Please [report any issues or bugs](https://github.com/ropenscilabs/laselva/issues).
+* Please [report any issues or bugs](https://github.com/sckott/laselva/issues).
 * License: MIT
 * Get citation information for `laselva` in R doing `citation(package = 'laselva')`
 * Please note that this project is released with a [Contributor Code of Conduct][coc]
 By participating in this project you agree to abide by its terms.
 
-[![ropensci_footer](https://ropensci.org/public_images/github_footer.png)](https://ropensci.org)
-
-[coc]: https://github.com/ropenscilabs/laselva/blob/master/.github/CODE_OF_CONDUCT.md
+[coc]: https://github.com/sckott/laselva/blob/master/.github/CODE_OF_CONDUCT.md
 [auspaper]: https://doi.org/10.1890/14-0458R.1
 [ausfig]: https://figshare.com/collections/Long-term_stem_inventory_data_from_tropical_rain_forest_plots_in_Australia/3307029
 [eupaper]: https://doi.org/10.1038/sdata.2016.123
