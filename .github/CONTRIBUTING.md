@@ -21,6 +21,10 @@ bug, create an associated issue and illustrate the bug with a minimal
 *  Look at the Travis and AppVeyor build status before and after making changes.
 The `README` should contain badges for any continuous integration services used
 by the package.  
+*  We recommend the tidyverse [style guide](http://style.tidyverse.org).
+You can use the [styler](https://CRAN.R-project.org/package=styler) package to
+apply these styles, but please don't restyle code that has nothing to do with 
+your PR.  
 *  We use [roxygen2](https://cran.r-project.org/package=roxygen2).  
 *  We use [testthat](https://cran.r-project.org/package=testthat). Contributions
 with test cases included are easier to accept.  
@@ -33,3 +37,10 @@ GitHub username, and links to relevant issue(s)/PR(s).
 Please note that the `laselva` project is released with a
 [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By contributing to this
 project you agree to abide by its terms.
+
+### See rOpenSci [contributing guide](https://devguide.ropensci.org/contributingguide.html)
+for further details.
+
+### Discussion forum
+
+Check out our [discussion forum](https://discuss.ropensci.org) if you think your issue requires a longer form discussion.

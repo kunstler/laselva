@@ -3,11 +3,13 @@ Type: Package
 Title: Access to Global Forest Inventory Data
 Description: Fetch forest inventory data from across the globe.
 Version: 0.0.9.91
-Authors@R: c(person("Scott", "Chamberlain", role = c("aut", "cre"),
+Authors@R: c(person("Georges", "Kunstler", role = c("ctb"),
+    email = "georges.kunstler@gmail.com"),
+             person("Scott", "Chamberlain", role = c("aut", "cre"),
     email = "myrmecocystus@gmail.com"))
 License: MIT + file LICENSE
-URL: https://github.com/sckott/laselva
-BugReports: https://github.com/sckott/laselva/issues
+URL: https://github.com/kunstler/laselva (source)
+BugReports: https://github.com/kunstler/laselva/issues
 Roxygen: list(markdown=TRUE)
 Encoding: UTF-8
 Language: en-US
