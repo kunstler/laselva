@@ -12,7 +12,7 @@ Please cite `laselva` if you use it in a paper: `citation(package = 'laselva')`
 
 ## Data sources
 
-- French IGN Institut National de L'Information Geographique et Forestiere
+- French IGN Institut National de L'Information Geographique et Forestiere. Need to be updated to work from downloaded zip data
 - [Spain][esp]
 - European plots [Scientific Data paper][eupaper], [dataset][eufig]
 - Australian plots [Ecology paper][auspaper], [dataset][ausfig]
@@ -32,7 +32,7 @@ If you want to get Spanish data, you'll need a system dependency called [mdbtool
 
 
 ```r
-remotes::install_github("sckott/laselva")
+remotes::install_github("kunstler/laselva")
 ```
 
 
@@ -45,7 +45,7 @@ installed we'll just return an empty list
 
 ## Meta
 
-* Please [report any issues or bugs](https://github.com/sckott/laselva/issues).
+* Please [report any issues or bugs](https://github.com/kunstler/laselva/issues).
 * License: MIT
 * Get citation information for `laselva` in R doing `citation(package = 'laselva')`
 * Please note that this project is released with a [Contributor Code of Conduct][coc]
