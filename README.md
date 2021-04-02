@@ -34,11 +34,7 @@ If you want to get Spanish data, you'll need a system dependency called [mdbtool
 
 
 ```r
-<<<<<<< HEAD
 remotes::install_github("kunstler/laselva")
-=======
-remotes::install_github("ropenscilabs/laselva")
->>>>>>> parent of 2e4cf32... move repo to sckott acct
 ```
 
 
@@ -51,11 +47,7 @@ installed we'll just return an empty list
 
 ## Meta
 
-<<<<<<< HEAD
 * Please [report any issues or bugs](https://github.com/kunstler/laselva/issues).
-=======
-* Please [report any issues or bugs](https://github.com/ropenscilabs/laselva/issues).
->>>>>>> parent of 2e4cf32... move repo to sckott acct
 * License: MIT
 * Get citation information for `laselva` in R doing `citation(package = 'laselva')`
 * Please note that this project is released with a [Contributor Code of Conduct][coc]

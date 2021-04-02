@@ -40,7 +40,7 @@ If you want to get Spanish data, you'll need a system dependency called [mdbtool
 ## Install
 
 ```{r eval=FALSE}
-remotes::install_github("ropenscilabs/laselva")
+remotes::install_github("kunstler/laselva")
 ```
 
 ```{r}
@@ -52,7 +52,7 @@ installed we'll just return an empty list
 
 ## Meta
 
-* Please [report any issues or bugs](https://github.com/ropenscilabs/laselva/issues).
+* Please [report any issues or bugs](https://github.com/kunstler/laselva/issues).
 * License: MIT
 * Get citation information for `laselva` in R doing `citation(package = 'laselva')`
 * Please note that this project is released with a [Contributor Code of Conduct][coc]
