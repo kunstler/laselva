@@ -16,7 +16,7 @@ Please cite `laselva` if you use it in a paper: `citation(package = 'laselva')`
 
 - French IGN Institut National de L'Information Geographique et Forestiere. Need to be updated to work from downloaded zip data
 - [Spain][esp]
-- European plots [Scientific Data paper][eupaper], [dataset][eufig]
+- Species Presence absence from NFI and other European plots [Scientific Data paper][eupaper], [dataset][eufig]
 - Australian plots [Ecology paper][auspaper], [dataset][ausfig]
 - United States Forest Inventory and Analysis (FIA)
 - Japan Ministry of the Environment, Monitoring Sites 1000 Project, [description][jpn]
